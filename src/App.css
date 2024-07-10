@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.link-container {
+  position: relative;
+  display: inline-block;
+  padding: 5px 25px; /* Add some padding to ensure the SVG background has space */
+}
+
+/* src/App.css */
+@layer components {
+    .link-hover-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('al-impexLogo-removebg-preview.svg'); /* Correct path */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  
+    .link-container:hover .link-hover-bg {
+      opacity: 0.3;
+    }
+  }
+  
+  
