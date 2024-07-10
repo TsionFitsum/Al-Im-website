@@ -7,6 +7,8 @@ import AboutUs from './Components/Pages/AboutUs';
 import Import from './Components/Pages/Import';
 import Export from './Components/Pages/Export';
 import ContactUs from './Components/Pages/ContactUs';
+import OilSeedsAndPulses from './Components/Pages/Zala';
+import Wezam from './Components/Pages/Wezam';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path='/import' Component={Import}/>
         <Route path='/export' Component={Export}/>
         <Route path='/contact-us' Component={ContactUs}/>
+        <Route path='/zala' Component={OilSeedsAndPulses}/>
+        <Route path='/wezam' Component={Wezam}/>
 
       </Routes>
 

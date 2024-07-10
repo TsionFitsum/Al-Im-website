@@ -17,7 +17,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="bg-gray-100 py-4 shadow-md">
+      <nav className="bg-gray-100 py-4 shadow-md relative z-10">
         <div className="container mx-auto flex justify-between items-center px-10">
           <div className="flex items-center">
             <img src={logoo} alt="Logo" className="h-20 w-25 mr-4" />
@@ -26,12 +26,12 @@ function Navbar() {
             {['/', '/About-Us', '/Import', '/Export', '/Contact-Us'].map((path) => (
               <li className="relative" key={path}
                 onMouseEnter={() => {
-                  if (path === '/import') setIsImportDropdownOpen(true);
-                  if (path === '/export') setIsExportDropdownOpen(true);
+                  if (path === '/Import') setIsImportDropdownOpen(true);
+                  if (path === '/Export') setIsExportDropdownOpen(true);
                 }}
                 onMouseLeave={() => {
-                  if (path === '/import') setIsImportDropdownOpen(false);
-                  if (path === '/export') setIsExportDropdownOpen(false);
+                  if (path === '/Import') setIsImportDropdownOpen(false);
+                  if (path === '/Export') setIsExportDropdownOpen(false);
                 }}>
                 <Link to={path} className={getLinkClasses(path)}>
                   <div className="link-container relative">
@@ -39,8 +39,8 @@ function Navbar() {
                     <div className="link-hover-bg"></div>
                   </div>
                 </Link>
-                {path === '/import' && isImportDropdownOpen && (
-                  <ul className="absolute left-0 mt-2 w-48 bg-white text-black rounded shadow-lg">
+                {path === '/Import' && isImportDropdownOpen && (
+                  <ul className="absolute left-0 mt-2 w-48 bg-white text-black rounded shadow-lg z-20">
                     <li className="px-4 py-2 hover:bg-green-100 hover:text-green-900 transition 
                     duration-300 ease-in-out" style={{ padding: '5px', margin: '10px', borderRadius: '5px' }}>
                       <Link to="/import/vehicles-and-trucks">Vehicles & Trucks</Link>
@@ -55,19 +55,15 @@ function Navbar() {
                     </li>
                   </ul>
                 )}
-                {path === '/export' && isExportDropdownOpen && (
-                  <ul className="absolute left-0 mt-2 w-48 bg-white text-black rounded shadow-lg">
+                {path === '/Export' && isExportDropdownOpen && (
+                  <ul className="absolute left-0 mt-2 w-48 bg-white text-black rounded shadow-lg z-20">
                     <li className="px-4 py-2 hover:bg-green-100 hover:text-green-900 transition 
                     duration-300 ease-in-out" style={{ padding: '5px', margin: '10px', borderRadius: '5px' }}>
-                      <Link to="/export/vehicles-and-trucks">Vehicles & Trucks</Link>
+                      <Link to="/zala">Zala (Oil Seeds and Pulses)</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-green-100 hover:text-green-900 transition 
                     duration-300 ease-in-out" style={{ padding: '5px', margin: '10px', borderRadius: '5px' }}>
-                      <Link to="/export/construction-machinery">Construction Machinery</Link>
-                    </li>
-                    <li className="px-4 py-2 hover:bg-green-100 hover:text-green-900 transition 
-                    duration-300 ease-in-out" style={{ padding: '5px', margin: '10px', borderRadius: '5px' }}>
-                      <Link to="/export/tyres-and-battery">Tyres & Battery</Link>
+                      <Link to="/wezam">Wezam (Coffee)</Link>
                     </li>
                   </ul>
                 )}
