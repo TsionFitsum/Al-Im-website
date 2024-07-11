@@ -28,31 +28,57 @@
       opacity: 0.3;
     }
 
-    button {
+    .button-hover-effect {
       position: relative;
-      z-index: 1;
+      display: inline-block;
+      color: gray;
+      font-size: 1.125rem; /* text-lg */
+      font-weight: 500; /* font-medium */
+      transition: color 0.3s ease-in-out;
     }
     
-    button:before {
+    .button-hover-effect::before {
       content: '';
       position: absolute;
-      bottom: 0;
-      left: 0;
+      left: 50%;
+      bottom: -4px;
       width: 0;
-      height: 0.5rem;
-      background: green;
-      transition: all 0.3s ease-in-out;
-      z-index: -1;
+      height: 2px;
+      background-color: #2f855a; /* green-700 */
+      transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
     }
     
-    button:hover:before {
+    .button-hover-effect::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
       width: 100%;
+      height: 100%;
+      background: url('al-impexLogo-removebg-preview.svg') no-repeat center center;
+      background-size: cover;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+      transform: translate(-50%, -50%);
+      -webkit-transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+      -moz-transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+      -ms-transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+      -o-transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+}
+    
+    .button-hover-effect:hover::before {
+      width: 100%;
+      left: 0;
     }
     
-    button.selected:before {
-      width: 100%;
+    .button-hover-effect:hover::after {
+      opacity: 0.4; /* Adjust the opacity to make the image more or less visible */
     }
+    
+    .button-hover-effect:hover {
+      color: #2f855a; /* green-700 */
+    }
+    
     
   }
-  
   
