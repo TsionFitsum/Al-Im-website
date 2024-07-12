@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
 import image1 from '../logo/year_of_pulses.jpg';
-// import image2 from '../logo/al-impexLogo.jpg';
 import image3 from '../logo/Firefly linseeds and sesame seeds in a bag against the background of burlap 35981.jpg';
 import image4 from '../logo/Firefly Red kidney beans, White pea beans, Green mung beans, Black beans, Haricot beans and Faba bea.jpg';
 import image5 from '../logo/Firefly oil seeds , pulses and spices 79532.jpg';
-import '../../App.css'; // Ensure this is the correct path to your CSS file
+import { Link, useLocation } from 'react-router-dom';
+// import './OilSeedsAndPulses.css';  // Import the CSS file here
 
 function OilSeedsAndPulses() {
   const [selectedCategory, setSelectedCategory] = useState('pulses'); // Initial category selected
+  const location = useLocation();
+
+  const getLinkClasses = (path) => {
+    return `relative text-black font-medium p-2 rounded transition duration-300 ease-in-out 
+      before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-green-700 
+      before:transition-all before:duration-300 
+      ${location.pathname === path ? 'before:w-full text-green-700' : 'hover:before:w-full hover:text-green-700 hover:bg-green-50 hover:bg-opacity-5'}`;
+  };
+
 
   const cards = [
     { category: 'pulses', image: image4, title: 'John Doe', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
@@ -56,7 +65,7 @@ function OilSeedsAndPulses() {
         </div>
       </div>
 
-      <div className="container mx-auto p-4 mt-20 bg-slate-50">
+      <div className="container mx-auto p-4 mt-20 bg-slate-100">
         <h1 className="text-3xl font-bold mb-4 text-center text-green-700">Export of Oil Seeds, Pulses & Spices</h1>
         <p className="mb-7 text-center text-lg text-gray-500">
           Our company is a major exporter of agricultural products, mainly oil seeds and pulses from Ethiopia to the global market.<br />
@@ -68,23 +77,32 @@ function OilSeedsAndPulses() {
       <div className="container mx-auto p-4 mt-20">
         <div className="flex justify-center space-x-4">
           <button onClick={handlePulsesClick} className={`button-hover-effect ${selectedCategory === 'pulses' ? 'text-green-700' : 'hover:text-green-700'}`}>
-            Pulses
+            <div className="link-container">
+              <span className="relative z-10">Pulses</span>
+              <div className="link-hover-bg absolute inset-0"></div>
+            </div>
           </button>
           <span>/</span>
           <button onClick={handleSpicesClick} className={`button-hover-effect ${selectedCategory === 'spices' ? 'text-green-700' : 'hover:text-green-700'}`}>
-            Spices
+            <div className="link-container">
+              <span className="relative z-10">Spices</span>
+              <div className="link-hover-bg absolute inset-0"></div>
+            </div>
           </button>
           <span>/</span>
           <button onClick={handleOilSeedsClick} className={`button-hover-effect ${selectedCategory === 'oilseeds' ? 'text-green-700' : 'hover:text-green-700'}`}>
-            Oil Seeds
+            <div className="link-container">
+              <span className="relative z-10">Oil Seeds</span>
+              <div className="link-hover-bg absolute inset-0"></div>
+            </div>
           </button>
         </div>
       </div>
 
       <div className="container mx-auto relative flex justify-center items-center p-4">
-        <div className="flex overflow-hidden w-3/4">
+        <div className="flex flex-wrap justify-center">
           {cardsToDisplay.slice(0, 3).map((card, index) => (
-            <div key={index} className="w-1/3 p-2 flex-shrink-0">
+            <div key={index} className="w-1/3 p-4 flex-shrink-0 card">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img className="w-full h-48 object-cover" src={card.image} alt={card.title} />
                 <div className="py-4 px-6 bg-white text-black">

@@ -2,83 +2,106 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Add the styles for the link container and hover effects */
 .link-container {
   position: relative;
   display: inline-block;
   padding: 5px 25px; /* Add some padding to ensure the SVG background has space */
 }
-
-/* src/App.css */
-@layer components {
-    .link-hover-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('al-impexLogo-removebg-preview.svg'); /* Correct path */
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-  
-    .link-container:hover .link-hover-bg {
-      opacity: 0.3;
-    }
-
-    .button-hover-effect {
-      position: relative;
-      display: inline-block;
-      color: gray;
-      font-size: 1.125rem; /* text-lg */
-      font-weight: 500; /* font-medium */
-      transition: color 0.3s ease-in-out;
-    }
-    
-    .button-hover-effect::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      bottom: -4px;
-      width: 0;
-      height: 2px;
-      background-color: #2f855a; /* green-700 */
-      transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-    }
-    
-    .button-hover-effect::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      height: 100%;
-      background: url('al-impexLogo-removebg-preview.svg') no-repeat center center;
-      background-size: cover;
-      opacity: 0;
-      transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
-      transform: translate(-50%, -50%);
-      -webkit-transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
-      -moz-transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
-      -ms-transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
-      -o-transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+.link-hover-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('al-impexLogo-removebg-preview.svg'); /* Update path as needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
-    
-    .button-hover-effect:hover::before {
-      width: 100%;
-      left: 0;
-    }
-    
-    .button-hover-effect:hover::after {
-      opacity: 0.4; /* Adjust the opacity to make the image more or less visible */
-    }
-    
-    .button-hover-effect:hover {
-      color: #2f855a; /* green-700 */
-    }
-    
-    
-  }
-  
+
+.link-container:hover .link-hover-bg {
+  opacity: 0.3;
+}
+
+.button-hover-effect {
+  position: relative;
+  display: inline-block;
+  color: gray;
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500; /* font-medium */
+  transition: color 0.3s ease-in-out;
+}
+/* Background SVG and underline hover effect */
+.button-hover-effect {
+  position: relative;
+  display: inline-block;
+  color: gray;
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500; /* font-medium */
+  transition: color 0.3s ease-in-out;
+}
+
+.button-hover-effect::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #2f855a; /* green-700 */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.button-hover-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: url('al-impexLogo-removebg-preview.svg') no-repeat center center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+
+.button-hover-effect:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.button-hover-effect:hover::after {
+  opacity: 0.3; /* Adjust the opacity to make the image more or less visible */
+}
+
+.button-hover-effect:hover {
+  color: #2f855a; /* green-700 */
+}
+
+.card {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  will-change: transform, box-shadow;
+}
+
+.card img {
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(32, 65, 33, 0.2);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+
+
+
