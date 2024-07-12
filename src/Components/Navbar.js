@@ -17,13 +17,13 @@ function Navbar() {
 
   return (
     <>
-      <nav className="bg-gray-100 py-4 shadow-md relative z-10">
+      <nav className="bg-gray-100 py-4 shadow-md fixed top-0 left-0 w-full z-50">
         <div className="container mx-auto flex justify-between items-center px-10">
           <div className="flex items-center">
             <img src={logoo} alt="Logo" className="h-20 w-25 mr-4" />
           </div>
           <ul className="flex space-x-6">
-            {['/', '/About-Us', '/Import', '/Export', '/Contact-Us'].map((path) => (
+            {['/', '/About-Us', '/Import', '/Export', '/Contact-Us', '/Manufacturing'].map((path) => (
               <li className="relative" key={path}
                 onMouseEnter={() => {
                   if (path === '/Import') setIsImportDropdownOpen(true);
@@ -72,6 +72,7 @@ function Navbar() {
           </ul>
         </div>
       </nav>
+      <div className="pt-20"></div> {/* Ensure content starts below the fixed navbar */}
     </>
   );
 }

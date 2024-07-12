@@ -2,7 +2,10 @@ import React from 'react'
 
 function Wezam() {
   return (
-    <div>Wezam</div>
+    <div>Wezam
+      <p>Wezammm</p>
+    </div>
+    
   )
 }
 
