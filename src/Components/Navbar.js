@@ -23,7 +23,7 @@ function Navbar() {
             <img src={logoo} alt="Logo" className="h-20 w-25 mr-4" />
           </div>
           <ul className="flex space-x-6">
-            {['/', '/About-Us', '/Import', '/Export', '/Contact-Us', '/Manufacturing'].map((path) => (
+            {['/', '/About-Us', '/Import', '/Export',  '/Manufacturing', '/Contact-Us'].map((path) => (
               <li className="relative" key={path}
                 onMouseEnter={() => {
                   if (path === '/Import') setIsImportDropdownOpen(true);

@@ -10,7 +10,7 @@ function Footer() {
           <h3>Contact Us</h3>
           <p>Bole Subcity,Dasset Building,6th Floor</p>
           <p>Addis Ababa, Ethiopia</p>
-          <p>Email: info@company.com</p>
+          <p>Email: info@al-impex.com</p>
           <p>Phone: +251 123 456 789</p>
         </div>
 
