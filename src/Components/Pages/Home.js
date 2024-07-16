@@ -128,7 +128,7 @@ const Home = () => {
               <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
                 <img src={exportt} alt="Card 1" className="w-full h-48 object-cover"/>
                 <div className="p-4">
-                  <h3 className="text-xl font-bold mb-2 text-center">Export</h3>
+                  <h3 className="text-xl font-bold mb-2 text-center text-green-700">Export</h3>
                   <p className="text-gray-700">Connecting global markets with premium exports: Coffee, oilseeds, spices, and pulses from Al-Impex.</p>
                   <div className="text-center">
                     <button 
@@ -148,7 +148,7 @@ const Home = () => {
               <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
                 <img src={importt} alt="Card 2" className="w-full h-48 object-cover"/>
                 <div className="p-4">
-                  <h3 className="text-xl font-bold mb-2 text-center">Import</h3>
+                  <h3 className="text-xl font-bold mb-2 text-center text-green-700">Import</h3>
                   <p className="text-gray-700">Bringing the world's best to you: High-quality imports across various sectors from Al-Impex</p>
                   <div className="text-center">
                     <button 
@@ -168,7 +168,7 @@ const Home = () => {
               <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
                 <img src={image11} alt="Card 3" className="w-full h-48 object-cover"/>
                 <div className="p-4">
-                  <h3 className="text-xl font-bold mb-2 text-center">Manufacturing</h3>
+                  <h3 className="text-xl font-bold mb-2 text-center text-green-700">Manufacturing</h3>
                   <p className="text-gray-700">Crafting excellence locally: Premium manufacturing solutions by Al-Impex, tailored to your needs.</p>
                   <div className="text-center">
                     <button 

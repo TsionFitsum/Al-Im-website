@@ -115,7 +115,7 @@
   .image-container .image-zoom-in {
     transition: transform 0.7s ease-out;
   }
-<<<<<<< HEAD
+
 
 @keyframes slide {
   from {
@@ -186,7 +186,7 @@
     margin:0 30px;
   }
   
-=======
+
   .reduced-size {
     width: 70%; /* or any other percentage/size you prefer */
     max-width: 400px; /* optional max width */
@@ -195,4 +195,4 @@
   .shadow-effect {
     box-shadow: 0 14px 18px rgba(0, 0, 0, 0.2); /* Adjust the shadow as needed */
   }
->>>>>>> f0f6388adbf77e9ae7a623d3ab2169b9d0d6b6ae
+
