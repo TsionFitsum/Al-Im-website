@@ -108,7 +108,7 @@ function Manufacturing() {
 
   <div className="small-container p-4 mt-8 flex items-center">
   <div className="flex-1 text-zoom-in">
-    <h3 className="text-2xl font-bold mb-2">Delivery Service</h3>
+    <h3 className="text-2xl font-bold mb-2 text-green-700">Delivery Service</h3>
     <p className="text-gray-700">We offer reliable and efficient delivery services to ensure your
        products reach you on time and in perfect condition. 
       Our dedicated team ensures that every delivery is handled with care and delivered promptly,
