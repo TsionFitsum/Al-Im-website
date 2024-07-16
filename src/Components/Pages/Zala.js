@@ -115,6 +115,20 @@ function OilSeedsAndPulses() {
           ))}
         </div>
       </div>
+      
+      <div className="small-container p-4 mt-8 flex items-center">
+  <div className="flex-1 text-zoom-in">
+    <h3 className="text-2xl font-bold mb-2 text-green-700">Export Quality</h3>
+    <p className="text-gray-700">We offer reliable and efficient delivery services to ensure your
+       products reach you on time and in perfect condition. 
+      Our dedicated team ensures that every delivery is handled with care and delivered promptly,
+       maintaining the quality and freshness of your products throughout the journey.</p>
+  </div>
+  <div className="flex-1 flex justify-center image-container">
+    <img src={image4} alt="Delivery" className="max-w-full h-auto object-contain image-zoom-in reduced-size shadow-effect" />
+  </div>
+</div>
+
     </div>
   );
 }
