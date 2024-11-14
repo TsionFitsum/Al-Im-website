@@ -6,7 +6,7 @@ import image5 from '../logo/cof.jpg';
 import image7 from '../logo/medicine.jpeg';
 import image8 from '../logo/tyre.webp';
 import image10 from '../logo/Construction_9.png';
-import image11 from '../logo/sunvittto.jpeg';
+import image11 from '../logo/ethio coffee.jpg';
 import brand1 from '../logo/amce.jpeg';
 import deliveryImage from '../logo/amce.jpeg';
 import brand3 from '../logo/amce.jpeg';
@@ -37,7 +37,7 @@ const Home = () => {
   const handleReadMoreCard2 = () => {
     setShowMoreCard2(!showMoreCard2);
   };
-
+  
   const handleReadMoreCard3 = () => {
     setShowMoreCard3(!showMoreCard3);
   };
@@ -90,7 +90,7 @@ const Home = () => {
             ></div>
           ))}
         </div>
-        <button
+        {/* <button
           onClick={prevSlide}
           className="absolute top-1/2 left-4 md:left-8 transform -translate-y-1/2 bg-gray-700 text-white px-3 py-1 rounded-full focus:outline-none"
         >
@@ -101,7 +101,7 @@ const Home = () => {
           className="absolute top-1/2 right-4 md:right-8 transform -translate-y-1/2 bg-gray-700 text-white px-3 py-1 rounded-full focus:outline-none"
         >
           &gt;
-        </button>
+        </button> */}
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {images.map((_, index) => (
             <div
