@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+
+nav {
+  background-color: #f9f9f9;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  padding: 5px 10px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li:hover {
+  background-color: #f0f0f0;
+}
+
 .link-container {
   position: relative;
   display: inline-block;
