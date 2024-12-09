@@ -79,38 +79,85 @@ const Home = () => {
         {/* Navbar content */}
       </nav>
 
-      {/* Image Carousel */}
-      <div className="relative flex items-center justify-center mt-4" style={{ height: '32rem' }}>
-        <div className="relative w-full h-full">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 w-full h-full bg-center bg-cover transition-opacity duration-500 ${currentImageIndex === index ? 'opacity-100' : 'opacity-0'}`}
-              style={{ backgroundImage: `url(${image})` }}
-            ></div>
-          ))}
-        </div>
-        {/* <button
-          onClick={prevSlide}
-          className="absolute top-1/2 left-4 md:left-8 transform -translate-y-1/2 bg-gray-700 text-white px-3 py-1 rounded-full focus:outline-none"
-        >
-          &lt;
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute top-1/2 right-4 md:right-8 transform -translate-y-1/2 bg-gray-700 text-white px-3 py-1 rounded-full focus:outline-none"
-        >
-          &gt;
-        </button> */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {images.map((_, index) => (
-            <div
-              key={index}
-              className={`w-3 h-3 rounded-full ${currentImageIndex === index ? 'bg-gray-800' : 'bg-gray-300'}`}
-            ></div>
-          ))}
-        </div>
-      </div>
+     {/* Image Carousel */}
+<div className="relative overflow-hidden">
+  {/* Background Images */}
+  <div
+    className="relative w-full h-screen"
+  >
+    {images.map((image, index) => (
+      <div
+        key={index}
+        className={`absolute inset-0 w-full h-full bg-center bg-cover transition-opacity duration-500 ${
+          currentImageIndex === index ? 'opacity-100' : 'opacity-0'
+        }`}
+        style={{
+          backgroundImage: `url(${image})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      ></div>
+    ))}
+  </div>
+
+  {/* Hero Text */}
+  <div
+    className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 transition-all duration-500"
+    style={{
+      backdropFilter: 'blur(0px)',
+      transition: 'backdrop-filter 0.5s',
+    }}
+    id="heroText"
+  >
+    <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+      PROMOTING DEVELOPMENT THROUGH ENTREPRENEURSHIP
+    </h1>
+    <p className="mt-4 text-lg md:text-xl max-w-2xl">
+      Bridging Markets, Building Opportunities.
+    </p>
+  </div>
+
+  {/* Scrollable Section */}
+  <div
+    className="absolute w-full h-[200vh] top-0 left-0 pointer-events-none"
+    id="scrollableSection"
+    style={{
+      backgroundImage: `url(${images[currentImageIndex]})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
+  ></div>
+
+  {/* Navigation Dots */}
+  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+    {images.map((_, index) => (
+      <div
+        key={index}
+        className={`w-3 h-3 rounded-full ${
+          currentImageIndex === index ? 'bg-gray-800' : 'bg-gray-300'
+        }`}
+      ></div>
+    ))}
+  </div>
+</div>
+
+<script>
+  // JavaScript to add scrolling effects
+  window.addEventListener("scroll", () => {
+    const scrollableSection = document.getElementById("scrollableSection");
+    const heroText = document.getElementById("heroText");
+    const scrolled = window.scrollY;
+
+    // Adjust the top of the scrollable image section based on scroll
+    scrollableSection.style.transform = `translateY(${scrolled}px)`;
+
+    // Add blur effect to text
+    heroText.style.backdropFilter = `blur(${Math.min(scrolled / 50, 5)}px)`;
+  });
+</script>
+
+
+
 
       {/* What We Do Section */}
       <div className="bg-gray-100 py-12 mb-30 relative z-10">
