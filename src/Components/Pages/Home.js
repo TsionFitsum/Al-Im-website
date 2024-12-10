@@ -79,12 +79,10 @@ const Home = () => {
         {/* Navbar content */}
       </nav>
 
-     {/* Image Carousel */}
-<div className="relative overflow-hidden">
+    {/* Image Carousel */}
+<div className="relative flex items-center justify-center mt-4" style={{ height: '32rem' }}>
   {/* Background Images */}
-  <div
-    className="relative w-full h-screen"
-  >
+  <div className="relative w-full h-full">
     {images.map((image, index) => (
       <div
         key={index}
@@ -93,43 +91,28 @@ const Home = () => {
         }`}
         style={{
           backgroundImage: `url(${image})`,
-          backgroundSize: 'cover',
+          backgroundSize: 'cover', // Ensure image covers the entire section
           backgroundPosition: 'center',
         }}
       ></div>
     ))}
   </div>
 
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
   {/* Hero Text */}
-  <div
-    className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 transition-all duration-500"
-    style={{
-      backdropFilter: 'blur(0px)',
-      transition: 'backdrop-filter 0.5s',
-    }}
-    id="heroText"
-  >
+  <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
     <h1 className="text-4xl md:text-6xl font-bold leading-tight">
       PROMOTING DEVELOPMENT THROUGH ENTREPRENEURSHIP
     </h1>
     <p className="mt-4 text-lg md:text-xl max-w-2xl">
-      Bridging Markets, Building Opportunities.
+    Bridging Markets, Building Opportunities.
     </p>
   </div>
 
-  {/* Scrollable Section */}
-  <div
-    className="absolute w-full h-[200vh] top-0 left-0 pointer-events-none"
-    id="scrollableSection"
-    style={{
-      backgroundImage: `url(${images[currentImageIndex]})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-    }}
-  ></div>
-
   {/* Navigation Dots */}
-  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
     {images.map((_, index) => (
       <div
         key={index}
@@ -141,29 +124,13 @@ const Home = () => {
   </div>
 </div>
 
-<script>
-  // JavaScript to add scrolling effects
-  window.addEventListener("scroll", () => {
-    const scrollableSection = document.getElementById("scrollableSection");
-    const heroText = document.getElementById("heroText");
-    const scrolled = window.scrollY;
-
-    // Adjust the top of the scrollable image section based on scroll
-    scrollableSection.style.transform = `translateY(${scrolled}px)`;
-
-    // Add blur effect to text
-    heroText.style.backdropFilter = `blur(${Math.min(scrolled / 50, 5)}px)`;
-  });
-</script>
-
-
 
 
       {/* What We Do Section */}
       <div className="bg-gray-100 py-12 mb-30 relative z-10">
         <div className="container mx-auto mt-20 mb-20 px-4">
           <div className="max-w-4xl mx-auto text-center mb-20">
-            <h2 className="text-4xl font-bold mb-10 text-green-800">What We Do</h2>
+            <h2 className="text-4xl font-bold mb-10 text-green-800"></h2>
             <p className="text-xl text-gray-600 mb-8">
               At Al-Impex, we are dedicated to connecting global markets and enriching local communities through
               our comprehensive range of services. Our operations are designed to deliver the highest quality products and services to our customers.

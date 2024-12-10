@@ -125,7 +125,7 @@ function VolcafeHeader() {
               {hoveredMenu === "about" && (
                 <ul className="absolute top-full left-0 bg-black text-white shadow-lg py-2 rounded w-56 dropdown">
                   <li className="px-4 py-2 hover:bg-gray-800">
-                    <Link to="/about/company">Our Company</Link>
+                    <Link to="/about-us">Our Company</Link>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-800">
                     <Link to="/about/team">Our Team</Link>
