@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logoo from '../logo/Al-Impex.png'; // Assuming this is your image for Who We Are
 import imageWhoWeAre from '../logo/al-impexLogo.jpg'; // Assuming this is your image for Who We Are
 import division1Image from '../logo/delivery.jpg'; // Import your division images
 import division2Image from '../logo/delivery.jpg';
@@ -8,6 +9,9 @@ import division5Image from '../logo/delivery.jpg';
 import division6Image from '../logo/delivery.jpg';
 import division7Image from '../logo/delivery.jpg';
 import '../../App.css'; // Ensure this is the correct path to your CSS file
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 function AboutUs() {
   const [expandedDivisions, setExpandedDivisions] = useState([]);
@@ -50,13 +54,13 @@ function AboutUs() {
             </p>
           </div>
           <div className="lg:w-1/2 flex justify-center">
-            <img src={imageWhoWeAre} alt="Who We Are" className="rounded-lg shadow-lg" />
+            <img src={logoo} alt="Who We Are" className="rounded-lg shadow-lg" />
           </div>
         </div>
       </div>
 
 {/* Vision, Mission, and Values Section */}
-<div className="container mx-auto p-8 mt-44">
+<div className="container mx-auto p-8 mt-32">
   {/* <h2 className="text-4xl font-bold text-center text-green-700 mb-8">Our Vision, Mission, and Values</h2> */}
 
   <div className="flex flex-col md:flex-row justify-between space-y-6 md:space-y-0 md:space-x-4">
@@ -76,7 +80,7 @@ function AboutUs() {
       <div className="absolute top-0 left-0 w-16 h-full bg-green-500 opacity-20"></div>
       <h3 className="text-2xl font-bold text-green-600 mb-4">Our Vision</h3>
       <p className="text-gray-700 mb-6">
-        To be a socially responsible world calss company.
+        To be a socially responsible world class company. 
       </p>
       {/* <div className="absolute bottom-4 right-4 text-sm font-bold text-gray-500">Step 02</div> */}
     </div>
@@ -96,10 +100,10 @@ function AboutUs() {
 
 
 {/* Introduction Section */}
-<div className="container mx-auto p-8 mt-16  rounded-lg shadow-lg">
+<div className="container mx-auto p-8 mt-32  rounded-lg shadow-lg">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
           <div className="lg:w-1/2 lg:pr-10 mb-8 lg:mb-0">
-            <h2 className="text-4xl font-bold text-green-700 mb-4">Our Story</h2>
+            <h2 className="text-4xl font-bold text-green-700 mb-4 ">Our Story</h2>
             <p className="text-lg text-gray-700">
             Founded in 2000, our company started as a small family business with a passion for agriculture and a vision to bring the 
           best of Ethiopia's oil seeds and pulses to the world. Over the years, we have grown into a major player in the export market, 
@@ -122,7 +126,7 @@ function AboutUs() {
 
 
       {/* Divisions Section */}
-      <div className="container mx-auto p-8 mt-44">
+      <div className="container mx-auto p-8 mt-32">
         <h2 className="text-4xl font-bold text-green-700 mb-8 text-center">Our Divisions</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Division 1 */}
