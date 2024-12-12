@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import image1 from '../logo/sunvito.jpeg';
+
 import image3 from '../logo/Wezzam.png';
-import image4 from '../logo/zala.png';
-import image5 from '../logo/hero-icon.jpg';
+
 import image7 from '../logo/medicine.jpeg';
-import image8 from '../logo/tyre.webp';
-import image10 from '../logo/Construction_9.png';
+
+
 import image11 from '../logo/Wezam.png';
 import brand1 from '../logo/amce.jpeg';
 import importt from '../logo/import.jpg';
@@ -13,7 +12,7 @@ import exportt from '../logo/export.jpg';
 import logo from '../logo/al-impexLogo.jpg';
 
 const Home = () => {
-  const images = [image1, image5, image3, image4, image7, image10, image11, image8];
+  const images = [image3, image7, image11];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const [showMoreCard1, setShowMoreCard1] = useState(false);
@@ -48,7 +47,7 @@ const Home = () => {
               style={{ backgroundImage: `url(${image})` }}
             />
           ))}
-        </div>
+        </div> 
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
