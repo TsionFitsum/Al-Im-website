@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import logoo from '../logo/Al-Impex.png'; // Assuming this is your image for Who We Are
 import imageWhoWeAre from '../logo/al-impexLogo.jpg'; // Assuming this is your image for Who We Are
@@ -30,13 +31,48 @@ function AboutUs() {
 
   return (
     <div>
-      {/* Banner Section */}
-      <div className="relative w-full h-[300px] bg-center bg-cover bg-green-700 flex flex-col items-center justify-center text-white">
-        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
-          <h1 className="text-5xl font-bold">About Al-Impex</h1>
-          <p className="mt-2 text-xl">Home / About Al-Impex</p> 
-        </div>
-      </div>
+ {/* About Us Section */}
+<div className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center">
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center bg-green-500"
+    // style={{
+    //   backgroundImage: "url('/path/to/your/about-us-banner.jpg')", // Replace with the About Us banner image
+    // }}
+  ></div>
+
+  {/* Semi-transparent Black Overlay */}
+  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  {/* Banner Content */}
+  <div
+    className="relative z-10 px-4 py-6 max-w-xl rounded-lg shadow-lg text-center"
+    style={{
+      background: "rgba(255, 255, 255, 0.3)", // Semi-transparent gray
+      backdropFilter: "blur(10px)", // Frosted glass blur effect
+      WebkitBackdropFilter: "blur(10px)", // For Safari
+      border: "1px solid rgba(255, 255, 255, 0.2)", // Subtle border
+    }}
+  >
+    <h1 className="text-2xl md:text-4xl font-bold text-green-800 leading-tight mb-2">
+      About Us
+    </h1>
+    <p className="text-gray-200 mb-4 text-sm md:text-base">
+      Learn more about our mission to promote excellence and innovation in dynamic markets.
+    </p>
+    <div className="flex justify-center gap-2">
+      <button className="bg-green-600 text-white font-bold py-1 px-3 rounded hover:bg-green-700 text-sm">
+        Learn More
+      </button>
+      <button className="bg-gray-200 text-gray-800 font-bold py-1 px-3 rounded hover:bg-gray-300 text-sm">
+        Contact Us
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
 
       {/* Introduction Section */}
       <div className="container mx-auto p-8 mt-16  rounded-lg shadow-lg">
@@ -63,7 +99,8 @@ function AboutUs() {
 <div className="container mx-auto p-8 mt-32">
   {/* <h2 className="text-4xl font-bold text-center text-green-700 mb-8">Our Vision, Mission, and Values</h2> */}
 
-  <div className="flex flex-col md:flex-row justify-between space-y-6 md:space-y-0 md:space-x-4">
+Tsion Fitsum, [13/12/2024 03:51]
+<div className="flex flex-col md:flex-row justify-between space-y-6 md:space-y-0 md:space-x-4">
     
     {/* Mission Card */}
     <div className="rounded-lg bg-gray-50 shadow-md border-l-4 border-yellow-500 flex-1 p-6 relative overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -121,10 +158,8 @@ function AboutUs() {
         </div>
       </div>
 
-
-
-
-      <div className="container mx-auto p-8 mt-32">
+Tsion Fitsum, [13/12/2024 03:51]
+<div className="container mx-auto p-8 mt-32">
   <h2 className="text-4xl font-bold text-green-700 mb-8 text-center">Our Divisions</h2>
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
     {/* Division 1 */}
@@ -230,4 +265,3 @@ function AboutUs() {
 }
 
 export default AboutUs;
-
