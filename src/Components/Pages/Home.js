@@ -25,6 +25,26 @@ const Home = () => {
   const [showMoreCard1, setShowMoreCard1] = useState(false);
   const [showMoreCard2, setShowMoreCard2] = useState(false);
   const [showMoreCard3, setShowMoreCard3] = useState(false);
+  const [showMoreCard4, setShowMoreCard4] = useState(false);
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
+
+  const testimonials = [
+    {
+      name: 'John Doe',
+      role: 'CEO, Example Corp',
+      text: 'Working with Al-Impex has been transformative for our business. Their dedication to excellence is unmatched.'
+    },
+    {
+      name: 'Jane Smith',
+      role: 'Director, Global Solutions',
+      text: 'The team at Al-Impex consistently delivers exceptional results. We value our partnership immensely.'
+    },
+    {
+      name: 'Ahmed Khan',
+      role: 'Founder, InnovateTech',
+      text: 'Al-Impex has been instrumental in helping us achieve our international growth objectives.'
+    }
+  ];
 
   const handleReadMoreCard1 = () => {
     setShowMoreCard1(!showMoreCard1);
@@ -37,6 +57,9 @@ const Home = () => {
   const handleReadMoreCard3 = () => {
     setShowMoreCard3(!showMoreCard3);
   };
+  const handleReadMoreCard4 = () => {
+    setShowMoreCard4(!showMoreCard4);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,8 +68,15 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const testimonialInterval = setInterval(() => {
+      setTestimonialIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 7000);
+    return () => clearInterval(testimonialInterval);
+  }, []);
+
   return (
-    <div className="overflow-hidden ">
+    <div className="overflow-hidden">
       {/* Hero Section */}
       <div className="relative flex items-center justify-center h-[340px] bg-gray-50">
         {/* Background Image Slider */}
@@ -69,10 +99,10 @@ const Home = () => {
         <div
           className="relative z-10 px-4 py-6 max-w-xl rounded-lg shadow-lg text-center"
           style={{
-            background: 'rgba(255, 255, 255, 0.3)', // Semi-transparent gray
-            backdropFilter: 'blur(10px)', // Frosted glass blur effect
-            WebkitBackdropFilter: 'blur(10px)', // For Safari
-            border: '1px solid rgba(255, 255, 255, 0.2)', // Optional subtle border
+            background: 'rgba(255, 255, 255, 0.3)',
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
+            border: '1px solid rgba(255, 255, 255, 0.2)'
           }}
         >
           <h1 className="text-2xl md:text-4xl font-bold text-green-800 leading-tight mb-2">
@@ -92,115 +122,38 @@ const Home = () => {
         </div>
       </div>
 
-      {/* What We Do Section */}
-      <div className="bg-gray-100 py-12 mb-30 relative z-10">
-        <div className="container mx-auto mt-20 mb-20 px-4">
-          <div className="max-w-4xl mx-auto text-center mb-20">
-            <h2 className="text-4xl font-bold mb-10 text-green-800">What We Do</h2>
-            <p className="text-xl text-gray-600 mb-8">
-              At Al-Impex, we are dedicated to connecting global markets and enriching local communities through
-              our comprehensive range of services. Our operations are designed to deliver the highest quality products and services to our customers.
-            </p>
+      {/* Brands We Work With */}
+      <div className='logos'>
+        <div className="small-container p-4 mt-20 flex items-center">
+          <div className="flex-1 text-zoom-in">
+            <h3 className="text-2xl font-bold mb-2 text-green-700 text-center mb-5">Brands We Work With</h3>
+            <p className="text-gray-500 text-center mb-5">Our company works with different brands from around the world.</p>
           </div>
-
-
-
-
-
-
-          <div className="flex flex-wrap justify-center mb-8 container mx-auto p-4">
-  <div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2">
-    <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
-      <img src={exportt} alt="Card 1" className="w-full h-40 object-cover"/>
-      <div className="p-4">
-        <h3 className="text-lg font-bold mb-2 text-center text-green-700">Export</h3>
-        <p className="text-gray-700 text-sm">Connecting global markets with premium exports: Coffee, oilseeds, spices, and pulses from Al-Impex.</p>
-        <div className="text-center">
-          <button 
-            onClick={handleReadMoreCard1}
-            className="bg-green-600 text-white py-1 px-3 rounded hover:bg-green-700 focus:outline-none focus:bg-green-700 mt-2 text-sm"
-          >
-            {showMoreCard1 ? 'Read Less' : 'Read More'}
-          </button>
-          {showMoreCard1 && (
-            <p className="text-gray-700 text-sm mt-2">A versatile cooking oil known for its light flavor and high smoke point, perfect for various culinary uses.</p>
-          )}
+        </div>
+        <div className="logos-slide">
+          {[
+            logo, brand7, image7, image11, brand5,
+            logo, brand7, image7, image11, brand5,
+            logo, brand7, image7, image11, brand5
+          ].map((src, index) => (
+            <img key={index} src={src} alt={`logo-${index}`} className="inline-block mx-2 my-4" />
+          ))}
         </div>
       </div>
-    </div>
-  </div>
 
-  <div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2">
-    <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
-      <img src={importt} alt="Card 2" className="w-full h-40 object-cover"/>
-      <div className="p-4">
-        <h3 className="text-lg font-bold mb-2 text-center text-green-700">Distribution</h3>
-        <p className="text-gray-700 text-sm">Bringing the world's best to you: High-quality imports across various sectors from Al-Impex.</p>
-        <div className="text-center">
-          <button 
-            onClick={handleReadMoreCard2}
-            className="bg-green-600 text-white py-1 px-3 rounded hover:bg-green-700 focus:outline-none focus:bg-green-700 mt-2 text-sm"
-          >
-            {showMoreCard2 ? 'Read Less' : 'Read More'}
-          </button>
-          {showMoreCard2 && (
-            <p className="text-gray-700 text-sm mt-2">A versatile cooking oil known for its light flavor and high smoke point, perfect for various culinary uses.</p>
-          )}
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2">
-    <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
-      <img src={image11} alt="Card 3" className="w-full h-40 object-cover"/>
-      <div className="p-4">
-        <h3 className="text-lg font-bold mb-2 text-center text-green-700">Manufacturing</h3>
-        <p className="text-gray-700 text-sm">Crafting excellence locally: Premium manufacturing solutions by Al-Impex, tailored to your needs.</p>
-        <div className="text-center">
-          <button 
-            onClick={handleReadMoreCard3}
-            className="bg-green-600 text-white py-1 px-3 rounded hover:bg-green-700 focus:outline-none focus:bg-green-700 mt-2 text-sm"
-          >
-            {showMoreCard3 ? 'Read Less' : 'Read More'}
-          </button>
-          {showMoreCard3 && (
-            <p className="text-gray-700 text-sm mt-2">A versatile cooking oil known for its light flavor and high smoke point, perfect for various culinary uses.</p>
-          )}
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2">
-    <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
-      <img src={image11} alt="Card 4" className="w-full h-40 object-cover"/>
-      <div className="p-4">
-        <h3 className="text-lg font-bold mb-2 text-center text-green-700">Agricultural Development</h3>
-        <p className="text-gray-700 text-sm">Crafting excellence locally: Premium manufacturing solutions by Al-Impex, tailored to your needs.</p>
-        <div className="text-center">
-          <button 
-            onClick={handleReadMoreCard3}
-            className="bg-green-600 text-white py-1 px-3 rounded hover:bg-green-700 focus:outline-none focus:bg-green-700 mt-2 text-sm"
-          >
-            {showMoreCard3 ? 'Read Less' : 'Read More'}
-          </button>
-          {showMoreCard3 && (
-            <p className="text-gray-700 text-sm mt-2">A versatile cooking oil known for its light flavor and high smoke point, perfect for various culinary uses.</p>
-          )}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
+      {/* Testimonials Section */}
+      <div className="bg-gray-100 py-12">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-8 text-green-800">What Our Clients Say</h2>
+          <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
+            <p className="text-gray-700 italic mb-4">"{testimonials[testimonialIndex].text}"</p>
+            <h4 className="text-green-700 font-bold">{testimonials[testimonialIndex].name}</h4>
+            <p className="text-gray-500 text-sm">{testimonials[testimonialIndex].role}</p>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Home;     
+export default Home;
