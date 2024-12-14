@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import image1 from '../logo/sunvito.jpeg';
 import image3 from '../logo/Wezzam.png';
@@ -18,9 +19,13 @@ import brand8 from '../logo/amce.jpeg';
 import importt from '../logo/import.jpg';
 import exportt from '../logo/export.jpg';
 import logo from '../logo/al-impexLogo.jpg';
+import he from '../logo/web.jpg';
+
+
 
 const Home = () => {
-  const images = [image3];
+  const images = [image1, image5, image3, image4, image7, image10, image11, image8];
+  const img = he ;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showMoreCard1, setShowMoreCard1] = useState(false);
   const [showMoreCard2, setShowMoreCard2] = useState(false);
@@ -61,6 +66,14 @@ const Home = () => {
     setShowMoreCard4(!showMoreCard4);
   };
 
+  const nextSlide = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -87,7 +100,7 @@ const Home = () => {
               className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-700 ${
                 currentImageIndex === index ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ backgroundImage: `url(${image})` }}
+              style={{ backgroundImage: `url(${img})` }}
             ></div>
           ))}
         </div>
@@ -95,36 +108,189 @@ const Home = () => {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        {/* Hero Content */}
-        <div
-          className="relative z-10 px-4 py-6 max-w-xl rounded-lg shadow-lg text-center"
-          style={{
-            background: 'rgba(255, 255, 255, 0.3)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            border: '1px solid rgba(255, 255, 255, 0.2)'
-          }}
-        >
-          <h1 className="text-2xl md:text-4xl font-bold text-green-800 leading-tight mb-2">
-            Promoting Development Through Entrepreneurship.
-          </h1>
-          <p className="text-gray-200 mb-4 text-sm md:text-base">
-            Achieving steady growth and performance in dynamic markets through excellence and innovation.
-          </p>
-          <div className="flex justify-center gap-2">
-            <button className="bg-green-600 text-white font-bold py-1 px-3 rounded hover:bg-green-700 text-sm">
-              Read More
-            </button>
-            <button className="bg-gray-200 text-gray-800 font-bold py-1 px-3 rounded hover:bg-gray-300 text-sm">
-              Watch the Webcast
-            </button>
+
+
+{/* Hero Content */}
+
+
+
+<div
+  className="relative z-10 px-4 py-6 max-w-xl rounded-lg shadow-lg text-center bg-white bg-opacity-30 backdrop-blur-md border border-white border-opacity-20 hover:bg-opacity-50 hover:shadow-xl hover:-translate-y-2 transition duration-300"
+>
+  <h1 className="text-2xl md:text-4xl font-bold text-green-800 leading-tight mb-2">
+    Promoting Development Through Entrepreneurship.
+  </h1>
+  <p className="text-gray-200 mb-4 text-sm md:text-base">
+    Achieving steady growth and performance in dynamic markets through excellence and innovation.
+  </p>
+  <div className="flex justify-center gap-2">
+    <button className="bg-green-600 text-white font-bold py-1 px-3 rounded hover:bg-green-700 text-sm">
+      Read More
+    </button>
+    <button className="bg-gray-200 text-gray-800 font-bold py-1 px-3 rounded hover:bg-gray-300 text-sm">
+      Watch the Webcast
+    </button>
+  </div>
+</div>
+
+
+
+
+        
+      </div>
+
+
+
+
+
+ {/* What We Do Section */}
+ <div className="bg-gray-100 py-12 mb-30 relative z-10">
+        <div className="container mx-auto mt-20 mb-20 px-4">
+          <div className="max-w-4xl mx-auto text-center mb-20">
+            <h2 className="text-4xl font-bold mb-10 text-green-800">What We Do</h2>
+            <p className="text-xl text-gray-600 mb-8">
+              At Al-Impex, we are dedicated to connecting global markets and enriching local communities through
+              our comprehensive range of services. Our operations are designed to deliver the highest quality products and services to our customers.
+            </p>
           </div>
+          </div>
+          <div className="flex flex-wrap justify-center mb-8 container mx-auto p-4">
+  <div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2 mb-40">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+      <img src={exportt} alt="Card 1" className="w-full h-40 object-cover"/>
+      <div className="p-4">
+        <h3 className="text-lg font-bold mb-2 text-center text-green-700">Export</h3>
+        <p className="text-gray-700 text-sm">Connecting global markets with premium exports: Coffee, oilseeds, spices, and pulses from Al-Impex.</p>
+        <div className="text-center">
+          <button 
+            onClick={handleReadMoreCard1}
+            className="bg-green-600 text-white py-1 px-3 rounded hover:bg-green-700 focus:outline-none focus:bg-green-700 mt-2 text-sm"
+          >
+            {showMoreCard1 ? 'Read Less' : 'Read More'}
+          </button>
+          {showMoreCard1 && (
+            <p className="text-gray-700 text-sm mt-2">A versatile cooking oil known for its light flavor and high smoke point, perfect for various culinary uses.</p>
+          )}
         </div>
       </div>
+    </div>
+  </div>
+<div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+      <img src={importt} alt="Card 2" className="w-full h-40 object-cover"/>
+      <div className="p-4">
+        <h3 className="text-lg font-bold mb-2 text-center text-green-700">Distribution</h3>
+        <p className="text-gray-700 text-sm">Bringing the world's best to you: High-quality imports across various sectors from Al-Impex.</p>
+        <div className="text-center">
+          <button 
+            onClick={handleReadMoreCard2}
+            className="bg-green-600 text-white py-1 px-3 rounded hover:bg-green-700 focus:outline-none focus:bg-green-700 mt-2 text-sm"
+          >
+            {showMoreCard2 ? 'Read Less' : 'Read More'}
+          </button>
+          {showMoreCard2 && (
+            <p className="text-gray-700 text-sm mt-2">A versatile cooking oil known for its light flavor and high smoke point, perfect for various culinary uses.</p>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+      <img src={image11} alt="Card 3" className="w-full h-40 object-cover"/>
+      <div className="p-4">
+        <h3 className="text-lg font-bold mb-2 text-center text-green-700">Manufacturing</h3>
+        <p className="text-gray-700 text-sm">Crafting excellence locally: Premium manufacturing solutions by Al-Impex, tailored to your needs.</p>
+        <div className="text-center">
+          <button 
+            onClick={handleReadMoreCard3}
+            className="bg-green-600 text-white py-1 px-3 rounded hover:bg-green-700 focus:outline-none focus:bg-green-700 mt-2 text-sm"
+          >
+            {showMoreCard3 ? 'Read Less' : 'Read More'}
+          </button>
+          {showMoreCard3 && (
+            <p className="text-gray-700 text-sm mt-2">A versatile cooking oil known for its light flavor and high smoke point, perfect for various culinary uses.</p>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+      <img src={image11} alt="Card 4" className="w-full h-40 object-cover"/>
+      <div className="p-4">
+        <h3 className="text-lg font-bold mb-2 text-center text-green-700">Agricultural Development</h3>
+        <p className="text-gray-700 text-sm">Crafting excellence locally: Premium manufacturing solutions by Al-Impex, tailored to your needs.</p>
+        <div className="text-center">
+          <button 
+            onClick={handleReadMoreCard3}
+            className="bg-green-600 text-white py-1 px-3 rounded hover:bg-green-700 focus:outline-none focus:bg-green-700 mt-2 text-sm"
+          >
+            {showMoreCard3 ? 'Read Less' : 'Read More'}
+          </button>
+          {showMoreCard3 && (
+            <p className="text-gray-700 text-sm mt-2">A versatile cooking oil known for its light flavor and high smoke point, perfect for various culinary uses.</p>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+
+
+
+
+         
+
+          <div>
+  {/* Image Carousel */}
+  <div className="relative flex items-center justify-center " style={{ height: '30rem' }}>
+    <div className="relative w-full h-full">
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 w-full h-full bg-center bg-cover transition-opacity duration-500 ${currentImageIndex === index ? 'opacity-100' : 'opacity-0'}`}
+          style={{ backgroundImage: `url(${image})` }}
+        ></div>
+      ))}
+    </div>
+
+    {/* Navigation Indicators */}
+    <div className="absolute  left-1/2 transform -translate-x-1/2 flex space-x-2">
+      {/* {images.map((_, index) => (
+        <div
+          key={index}
+          className={`w-2.5 h-2.5 rounded-full ${currentImageIndex === index ? 'bg-gray-800' : 'bg-gray-300'}`}
+        ></div>
+      ))} */}
+    </div>
+  </div>
+</div>
+
+
+
+
+{/* Testimonials Section */}
+<div className="bg-gray-100 py-12 mt-24 ">
+  <div className="container mx-auto px-4 text-center mt-20 mb-20">
+    <h2 className="text-4xl font-bold mb-8 text-green-800">What Our Clients Say</h2>
+
+    <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6 border-2 border-green-500 transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
+      <p className="text-gray-700 italic mb-4 text-bold">"{testimonials[testimonialIndex].text}"</p>
+      <h4 className="text-green-700 font-bold text-bold">{testimonials[testimonialIndex].name}</h4>
+      <p className="text-gray-500 text-sm">{testimonials[testimonialIndex].role}</p>
+    </div>
+    
+  </div>
+</div>
+
 
       {/* Brands We Work With */}
       <div className='logos'>
-        <div className="small-container p-4 mt-20 flex items-center">
+        <div className="small-container p-4  flex items-center">
           <div className="flex-1 text-zoom-in">
             <h3 className="text-2xl font-bold mb-2 text-green-700 text-center mb-5">Brands We Work With</h3>
             <p className="text-gray-500 text-center mb-5">Our company works with different brands from around the world.</p>
@@ -141,17 +307,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Testimonials Section */}
-      <div className="bg-gray-100 py-12">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8 text-green-800">What Our Clients Say</h2>
-          <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
-            <p className="text-gray-700 italic mb-4">"{testimonials[testimonialIndex].text}"</p>
-            <h4 className="text-green-700 font-bold">{testimonials[testimonialIndex].name}</h4>
-            <p className="text-gray-500 text-sm">{testimonials[testimonialIndex].role}</p>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };

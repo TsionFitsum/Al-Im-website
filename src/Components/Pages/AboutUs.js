@@ -1,4 +1,4 @@
-
+import he from '../logo/web.jpg';
 import React, { useState } from "react";
 import logoo from '../logo/Al-Impex.png'; // Assuming this is your image for Who We Are
 import imageWhoWeAre from '../logo/al-impexLogo.jpg'; // Assuming this is your image for Who We Are
@@ -31,47 +31,37 @@ function AboutUs() {
 
   return (
     <div>
- {/* About Us Section */}
-<div className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center">
+    {/* Banner Section */}
+    <div className="relative w-full h-[300px] flex items-center justify-center">
   {/* Background Image */}
   <div
-    className="absolute inset-0 bg-cover bg-center bg-green-500"
-    // style={{
-    //   backgroundImage: "url('/path/to/your/about-us-banner.jpg')", // Replace with the About Us banner image
-    // }}
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage: "url(${he})",
+    }}
   ></div>
 
-  {/* Semi-transparent Black Overlay */}
+  {/* Overlay */}
   <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-  {/* Banner Content */}
+  {/* Content */}
   <div
-    className="relative z-10 px-4 py-6 max-w-xl rounded-lg shadow-lg text-center"
+    className="relative z-10 px-4 py-6 max-w-xl rounded-lg text-center"
     style={{
-      background: "rgba(255, 255, 255, 0.3)", // Semi-transparent gray
-      backdropFilter: "blur(10px)", // Frosted glass blur effect
-      WebkitBackdropFilter: "blur(10px)", // For Safari
-      border: "1px solid rgba(255, 255, 255, 0.2)", // Subtle border
+      background: 'rgba(255, 255, 255, 0.3)',
+      backdropFilter: 'blur(10px)',
+      WebkitBackdropFilter: 'blur(10px)',
+      border: '1px solid rgba(255, 255, 255, 0.2)',
     }}
   >
-    <h1 className="text-2xl md:text-4xl font-bold text-green-800 leading-tight mb-2">
-      About Us
+    <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+      About Al-Impex
     </h1>
-    <p className="text-gray-200 mb-4 text-sm md:text-base">
-      Learn more about our mission to promote excellence and innovation in dynamic markets.
+    <p className="text-sm md:text-base text-gray-200">
+      Home / About Al-Impex
     </p>
-    <div className="flex justify-center gap-2">
-      <button className="bg-green-600 text-white font-bold py-1 px-3 rounded hover:bg-green-700 text-sm">
-        Learn More
-      </button>
-      <button className="bg-gray-200 text-gray-800 font-bold py-1 px-3 rounded hover:bg-gray-300 text-sm">
-        Contact Us
-      </button>
-    </div>
   </div>
 </div>
-
-
 
 
       {/* Introduction Section */}
@@ -99,7 +89,7 @@ function AboutUs() {
 <div className="container mx-auto p-8 mt-32">
   {/* <h2 className="text-4xl font-bold text-center text-green-700 mb-8">Our Vision, Mission, and Values</h2> */}
 
-Tsion Fitsum, [13/12/2024 03:51]
+
 <div className="flex flex-col md:flex-row justify-between space-y-6 md:space-y-0 md:space-x-4">
     
     {/* Mission Card */}
@@ -158,7 +148,7 @@ Tsion Fitsum, [13/12/2024 03:51]
         </div>
       </div>
 
-Tsion Fitsum, [13/12/2024 03:51]
+
 <div className="container mx-auto p-8 mt-32">
   <h2 className="text-4xl font-bold text-green-700 mb-8 text-center">Our Divisions</h2>
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -253,6 +243,55 @@ Tsion Fitsum, [13/12/2024 03:51]
         </button>
       </div>
     </div>
+
+
+    <div className="flex flex-col h-full overflow-hidden rounded-lg shadow-lg hover:shadow-xl transform transition duration-500 hover:scale-105">
+      <img src={division4Image} alt="Division 4" className="rounded-t-lg" />
+      <div className="flex flex-col flex-grow p-4 bg-gray-100 text-gray-700">
+        <h3 className="text-xl font-bold mb-2">Animal Health</h3>
+        <div
+          className={`transition-all overflow-hidden ${
+            expandedDivision === 4 ? "max-h-32" : "max-h-8"
+          }`}
+        >
+          <p className="text-gray-700">
+            Description of Division 4. Proin id sem id magna varius ullamcorper.
+          </p>
+        </div>
+        <button
+          onClick={() => toggleExpansion(4)}
+          className="mt-auto text-green-500"
+        >
+          {expandedDivision === 4 ? "Read Less" : "Read More"}
+        </button>
+      </div>
+    </div>
+
+    <div className="flex flex-col h-full overflow-hidden rounded-lg shadow-lg hover:shadow-xl transform transition duration-500 hover:scale-105">
+      <img src={division4Image} alt="Division 4" className="rounded-t-lg" />
+      <div className="flex flex-col flex-grow p-4 bg-gray-100 text-gray-700">
+        <h3 className="text-xl font-bold mb-2">Animal Health</h3>
+        <div
+          className={`transition-all overflow-hidden ${
+            expandedDivision === 4 ? "max-h-32" : "max-h-8"
+          }`}
+        >
+          <p className="text-gray-700">
+            Description of Division 4. Proin id sem id magna varius ullamcorper.
+          </p>
+        </div>
+        <button
+          onClick={() => toggleExpansion(4)}
+          className="mt-auto text-green-500"
+        >
+          {expandedDivision === 4 ? "Read Less" : "Read More"}
+        </button>
+      </div>
+    </div>
+
+
+
+
   </div>
 </div>
 

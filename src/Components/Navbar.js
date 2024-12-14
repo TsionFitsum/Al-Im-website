@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logoo from "../Components/logo/Official_al-impex_logo-removebg-preview.png";
@@ -27,9 +28,9 @@ function VolcafeHeader() {
               onMouseLeave={handleMouseLeave}
             >
               <Link to="/" className="text-white hover:text-gray-300 px-4">
-                Home ↓
+                Home 
               </Link>
-              {hoveredMenu === "home" && (
+              {/* {hoveredMenu === "home" && (
                 <ul className="absolute top-full left-0 bg-black text-white shadow-lg py-2 rounded w-48 dropdown">
                   <li className="px-4 py-2 hover:bg-gray-800">
                     <Link to="/home/option1">Option 1</Link>
@@ -38,63 +39,17 @@ function VolcafeHeader() {
                     <Link to="/home/option2">Option 2</Link>
                   </li>
                 </ul>
-              )}
+              )} */}
             </div>
 
             <div className="border-l border-gray-500 h-6 mx-2"></div>
 
-            {/* Offices Tab */}
-            <div
-              className="relative flex items-center nav-tab"
-              onMouseEnter={() => handleMouseEnter("offices")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <Link to="/offices" className="text-white hover:text-gray-300 px-4">
-                Offices ↓
-              </Link>
-              {hoveredMenu === "offices" && (
-                <ul className="absolute top-full left-0 bg-black text-white shadow-lg py-2 rounded w-48 dropdown">
-                  <li className="px-4 py-2 hover:bg-gray-800">
-                    <Link to="/offices/asia">Asia</Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-800">
-                    <Link to="/offices/europe">Europe</Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-800">
-                    <Link to="/offices/africa">Africa</Link>
-                  </li>
-                </ul>
-              )}
-            </div>
-
-            <div className="border-l border-gray-500 h-6 mx-2 bold"></div>
-
-            {/* Careers Tab */}
-            <div
-              className="relative flex items-center nav-tab"
-              onMouseEnter={() => handleMouseEnter("careers")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <Link to="/careers" className="text-white hover:text-gray-300 px-4">
-                Careers ↓
-              </Link>
-              {hoveredMenu === "careers" && (
-                <ul className="absolute top-full left-0 bg-black text-white shadow-lg py-2 rounded w-48 dropdown">
-                  <li className="px-4 py-2 hover:bg-gray-800">
-                    <Link to="/careers/jobs">Job Openings</Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-800">
-                    <Link to="/careers/internships">Internships</Link>
-                  </li>
-                </ul>
-              )}
-            </div>
 
             <div className="border-l border-gray-500 h-6 mx-2"></div>
 
             {/* Contact Tab */}
             <div className="flex items-center">
-              <Link to="/contact" className="text-white hover:text-gray-300 px-4">
+              <Link to="/contact-us" className="text-white hover:text-gray-300 px-4">
                 Contact
               </Link>
             </div>
@@ -115,7 +70,7 @@ function VolcafeHeader() {
             
             {/* About Tab */}
             <div
-              className="relative nav-tab"
+              className="relative nav-tab text-bold"
               onMouseEnter={() => handleMouseEnter("about")}
               onMouseLeave={handleMouseLeave}
             >
@@ -127,40 +82,44 @@ function VolcafeHeader() {
                   <li className="px-4 py-2 hover:bg-gray-800">
                     <Link to="/about-us">Our Company</Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-800">
+                  {/* <li className="px-4 py-2 hover:bg-gray-800">
                     <Link to="/about/team">Our Team</Link>
-                  </li>
+                  </li> */}
                 </ul>
               )}
             </div>
 
-            {/* Coffee Network Tab */}
+
+{/* Coffee Network Tab */}
             <div
               className="relative nav-tab"
               onMouseEnter={() => handleMouseEnter("network")}
               onMouseLeave={handleMouseLeave}
             >
               <Link to="/network" className="font-bold hover:text-gray-700">
-                Our Coffee Network ↓
+                Our Services and Products ↓
               </Link>
               {hoveredMenu === "network" && (
                 <ul className="absolute top-full left-0 bg-black text-white shadow-lg py-2 rounded w-56 dropdown">
                   <li className="px-4 py-2 hover:bg-gray-800">
-                    <Link to="/network/global">Global Network</Link>
+                    <Link to="/manufacturing">Manufacturing</Link>
                   </li>
                   <li className="px-4 py-2 hover:bg-gray-800">
-                    <Link to="/network/local">Local Partnerships</Link>
+                    <Link to="/wezam">Wezam</Link>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-800">
+                    <Link to="/zala">Zala</Link>
                   </li>
                 </ul>
               )}
             </div>
 
-            <Link to="/sustainability" className="font-bold hover:text-gray-700">
-              Sustainability
+            <Link to="/contact-us" className="font-bold hover:text-gray-700">
+              Get In Touch
             </Link>
-            <Link to="/news" className="font-bold hover:text-gray-700">
+            {/* <Link to="/news" className="font-bold hover:text-gray-700">
               News and Impact
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
