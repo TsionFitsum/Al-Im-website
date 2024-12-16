@@ -17,45 +17,39 @@ function VolcafeHeader() {
   return (
     <header>
       {/* Top Navbar */}
-      <div className="bg-black text-white relative z-50">
-        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-          <nav className="flex items-center bg-black text-white ml-32 relative">
-            
-            {/* Home Tab */}
-            <div
-              className="relative flex items-center nav-tab"
-              onMouseEnter={() => handleMouseEnter("home")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <Link to="/" className="text-white hover:text-gray-300 px-4">
-                Home 
-              </Link>
-              {/* {hoveredMenu === "home" && (
-                <ul className="absolute top-full left-0 bg-black text-white shadow-lg py-2 rounded w-48 dropdown">
-                  <li className="px-4 py-2 hover:bg-gray-800">
-                    <Link to="/home/option1">Option 1</Link>
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-800">
-                    <Link to="/home/option2">Option 2</Link>
-                  </li>
-                </ul>
-              )} */}
-            </div>
-
-            <div className="border-l border-gray-500 h-6 mx-2"></div>
-
-
-            <div className="border-l border-gray-500 h-6 mx-2"></div>
-
-            {/* Contact Tab */}
-            <div className="flex items-center">
-              <Link to="/contact-us" className="text-white hover:text-gray-300 px-4">
-                Contact
-              </Link>
-            </div>
-          </nav>
-        </div>
+      <div className="bg-green-700 text-white relative z-50">
+  <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+    <nav className="flex items-center bg-green-700 text-white ml-32 relative">
+      
+      {/* Home Tab */}
+      <div
+        className="relative flex items-center nav-tab"
+        onMouseEnter={() => handleMouseEnter("home")}
+        onMouseLeave={handleMouseLeave}
+      >
+        <Link
+          to="/"
+          className="text-white hover:text-gray-300 px-4 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+        >
+          Home
+        </Link>
       </div>
+
+      <div className="border-l border-gray-400 h-6 mx-2"></div>
+
+      {/* Contact Tab */}
+      <div className="flex items-center">
+        <Link
+          to="/contact-us"
+          className="text-white hover:text-gray-300 px-4 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+        >
+          Contact
+        </Link>
+      </div>
+    </nav>
+  </div>
+</div>
+
 
             {/* Second Row Navbar */}
             <div className="bg-white text-black relative z-20">

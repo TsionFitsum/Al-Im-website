@@ -113,7 +113,6 @@ const Home = () => {
 {/* Hero Content */}
 
 
-
 <div
   className="relative z-10 px-4 py-6 max-w-xl rounded-lg shadow-lg text-center bg-white bg-opacity-30 backdrop-blur-md border border-white border-opacity-20 hover:bg-opacity-50 hover:shadow-xl hover:-translate-y-2 transition duration-300"
 >
@@ -132,11 +131,6 @@ const Home = () => {
     </button>
   </div>
 </div>
-
-
-
-
-        
       </div>
 
 
@@ -196,7 +190,8 @@ const Home = () => {
     </div>
   </div>
 
-  <div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2">
+
+<div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2">
     <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
       <img src={image11} alt="Card 3" className="w-full h-40 object-cover"/>
       <div className="p-4">
@@ -288,7 +283,7 @@ const Home = () => {
 </div>
 
 
-      {/* Brands We Work With */}
+{/* Brands We Work With */}
       <div className='logos'>
         <div className="small-container p-4  flex items-center">
           <div className="flex-1 text-zoom-in">
