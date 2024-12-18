@@ -14,7 +14,9 @@ function ContactUs() {
           <div className="bg-white p-20 rounded-lg shadow-lg mb-6 flex flex-wrap lg:flex-nowrap items-center lg:items-start justify-between">
             {/* Phone */}
             <div className="flex flex-col items-center mb-6 lg:mb-0 lg:w-1/4">
-              <FiPhone className="text-green-500 text-5xl lg:text-6xl mb-2" />
+              <div className="flex items-center justify-center w-16 h-16 border border-green-500 rounded-full mb-2">
+                <FiPhone className="text-green-500 text-3xl" />
+              </div>
               <div className="text-center">
                 <p className="text-gray-700 text-sm lg:text-base">CALL US</p>
                 <p className="text-gray-700 text-sm lg:text-base font-bold">Office: +251116325241/93</p>
@@ -25,7 +27,9 @@ function ContactUs() {
 
             {/* Email */}
             <div className="flex flex-col items-center mb-6 lg:mb-0 lg:w-1/4">
-              <FiMail className="text-green-500 text-5xl lg:text-6xl mb-2" />
+              <div className="flex items-center justify-center w-16 h-16 border border-green-500 rounded-full mb-2">
+                <FiMail className="text-green-500 text-3xl" />
+              </div>
               <div className="text-center">
                 <p className="text-gray-700 text-sm lg:text-base">EMAIL</p>
                 <p className="text-gray-700 text-sm lg:text-base font-bold">info@al-impex.com</p>
@@ -34,7 +38,9 @@ function ContactUs() {
 
             {/* Address */}
             <div className="flex flex-col items-center mb-6 lg:mb-0 lg:w-1/4">
-              <FiMapPin className="text-green-500 text-5xl lg:text-6xl mb-2" />
+              <div className="flex items-center justify-center w-16 h-16 border border-green-500 rounded-full mb-2">
+                <FiMapPin className="text-green-500 text-3xl" />
+              </div>
               <div className="text-center">
                 <p className="text-gray-700 text-sm lg:text-base">LOCATION</p>
                 <p className="text-gray-700 text-sm lg:text-base font-bold">Kirkos Subcity, Dembel City Center 5th floor</p>
@@ -44,7 +50,9 @@ function ContactUs() {
 
             {/* Working Hours */}
             <div className="flex flex-col items-center lg:w-1/4">
-              <FiClock className="text-green-500 text-5xl lg:text-6xl mb-2" />
+              <div className="flex items-center justify-center w-16 h-16 border border-green-500 rounded-full mb-2">
+                <FiClock className="text-green-500 text-3xl" />
+              </div>
               <div className="text-center">
                 <p className="text-gray-700 text-sm lg:text-base">BUSINESS HOURS</p>
                 <p className="text-gray-700 text-sm lg:text-base font-bold">Mon – Fri 8:30 AM – 5:30 PM</p>
