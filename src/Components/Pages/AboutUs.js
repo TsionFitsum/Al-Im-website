@@ -8,7 +8,7 @@ import division1Image from '../logo/sunvito.jpeg'; // Import your division image
 import division2Image from '../logo/delivery.jpg';
 import division3Image from '../logo/cof.jpg';
 import division4Image from '../logo/zala.png';
-import division5Image from '../logo/pfizerrr.jpeg';
+import division5Image from '../logo/zoetis.jpeg';
 import division6Image from '../logo/delivery.jpg';
 import division7Image from '../logo/export.jpg';
 import '../../App.css'; // Ensure this is the correct path to your CSS file

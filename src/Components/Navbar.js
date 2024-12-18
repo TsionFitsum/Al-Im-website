@@ -35,17 +35,39 @@ function VolcafeHeader() {
         </Link>
       </div>
 
+      
       <div className="border-l border-gray-400 h-6 mx-2"></div>
 
-      {/* Contact Tab */}
+      <Link
+          to="/contact-us"
+          className="text-white hover:text-gray-300 px-4 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+        >
+          Careers
+        </Link>
+        <div className="border-l border-gray-400 h-6 mx-2"></div>
+
+      {/* locations Tab */}
       <div className="flex items-center">
         <Link
           to="/contact-us"
           className="text-white hover:text-gray-300 px-4 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
         >
-          Contact
+          Locations
         </Link>
       </div>
+
+        <div className="border-l border-gray-400 h-6 mx-2"></div>
+
+{/* Contact Tab */}
+<div className="flex items-center">
+  <Link
+    to="/contact-us"
+    className="text-white hover:text-gray-300 px-4 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+  >
+    Contact
+  </Link>
+</div>
+
     </nav>
   </div>
 </div>

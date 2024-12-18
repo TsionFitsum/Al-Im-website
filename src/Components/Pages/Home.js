@@ -20,6 +20,7 @@ import importt from '../logo/import.jpg';
 import exportt from '../logo/export.jpg';
 import logo from '../logo/al-impexLogo.jpg';
 import he from '../logo/web.jpg';
+import Parallax from './Parallax';
 
 
 
@@ -138,7 +139,7 @@ const Home = () => {
 
 
  {/* What We Do Section */}
- <div className="bg-gray-100 py-12 mb-30 relative z-10">
+ <div className="bg-gray-100 py-12 mb-4 relative z-10 ">
         <div className="container mx-auto mt-20 mb-20 px-4">
           <div className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="text-4xl font-bold mb-10 text-green-800">What We Do</h2>
@@ -149,7 +150,7 @@ const Home = () => {
           </div>
           </div>
           <div className="flex flex-wrap justify-center mb-8 container mx-auto p-4">
-  <div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2 mb-40">
+  <div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2 mb-10">
     <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
       <img src={exportt} alt="Card 1" className="w-full h-40 object-cover"/>
       <div className="p-4">
@@ -169,7 +170,7 @@ const Home = () => {
       </div>
     </div>
   </div>
-<div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2">
+<div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2 mb-14">
     <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
       <img src={importt} alt="Card 2" className="w-full h-40 object-cover"/>
       <div className="p-4">
@@ -212,7 +213,7 @@ const Home = () => {
     </div>
   </div>
 
-  <div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2">
+  <div className="w-full sm:w-6/12 md:w-4/12 lg:w-3/12 p-2 ">
     <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
       <img src={image11} alt="Card 4" className="w-full h-40 object-cover"/>
       <div className="p-4">
@@ -237,50 +238,59 @@ const Home = () => {
 
 
 
+<div>
+<div className="bg-white py-12 px-6 md:px-20 flex flex-col md:flex-row items-center gap-8 mt-14 mb-14">
+      {/* Text Content */}
+      <div className="md:w-1/2 text-center md:text-left">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        Empowering Global Trade from Ethiopia
+        </h2>
+        <p className="text-gray-600 mb-6">
+        Rooted in Ethiopia, we specialize in exporting premium coffee, oilseeds, and pulses to global markets. 
+        As a trusted importer of diverse materials and a manufacturer of high-quality coffee and edible oil, 
+        we also take pride in distributing oil to meet growing regional demands.
+        </p>
+        <button className="bg-green-600 text-white font-semibold px-6 py-3 rounded hover:bg-green-700 transition">
+        Experience Our Commitment to Quality and Sustainability
+        </button>
+      </div>
+
+      {/* Image Section */}
+      <div className="md:w-1/2">
+        <img
+          src="https://via.placeholder.com/600x400" // Replace with your image URL
+          alt="Agriculture"
+          className="rounded-lg shadow-lg"
+        />
+      </div>
+    </div>
+</div>
+
+
 
          
 
-          <div>
-  {/* Image Carousel */}
-  <div className="relative flex items-center justify-center " style={{ height: '30rem' }}>
-    <div className="relative w-full h-full">
-      {images.map((image, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 w-full h-full bg-center bg-cover transition-opacity duration-500 ${currentImageIndex === index ? 'opacity-100' : 'opacity-0'}`}
-          style={{ backgroundImage: `url(${image})` }}
-        ></div>
-      ))}
+<div>
+      {/* Your other sections */}
+
+      <div>
+      {/* Your other sections */}
+
+      {/* Parallax Carousel Section */}
+      <Parallax
+        images={[image1,  image3, image4, image5]} // Array of images for the carousel
+        height="600px" // Optional: Set the height of the carousel
+      />
+
+      {/* Your other sections */}
     </div>
 
-    {/* Navigation Indicators */}
-    <div className="absolute  left-1/2 transform -translate-x-1/2 flex space-x-2">
-      {/* {images.map((_, index) => (
-        <div
-          key={index}
-          className={`w-2.5 h-2.5 rounded-full ${currentImageIndex === index ? 'bg-gray-800' : 'bg-gray-300'}`}
-        ></div>
-      ))} */}
+      {/* Your other sections */}
     </div>
-  </div>
-</div>
 
 
 
 
-{/* Testimonials Section */}
-<div className="bg-gray-100 py-12 mt-24 ">
-  <div className="container mx-auto px-4 text-center mt-20 mb-20">
-    <h2 className="text-4xl font-bold mb-8 text-green-800">What Our Clients Say</h2>
-
-    <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6 border-2 border-green-500 transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
-      <p className="text-gray-700 italic mb-4 text-bold">"{testimonials[testimonialIndex].text}"</p>
-      <h4 className="text-green-700 font-bold text-bold">{testimonials[testimonialIndex].name}</h4>
-      <p className="text-gray-500 text-sm">{testimonials[testimonialIndex].role}</p>
-    </div>
-    
-  </div>
-</div>
 
 
 {/* Brands We Work With */}
