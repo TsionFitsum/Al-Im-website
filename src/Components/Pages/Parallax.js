@@ -29,9 +29,12 @@ const Parallax = ({ images, height }) => {
       <div className="relative z-10">
         <h1 className="text-4xl font-bold mb-2">Empowering Global Trade</h1>
         <p className="text-lg">Excellence in Export, Import, and Manufacturing.</p>
-        <button className="bg-green-600 text-white py-2 px-4 mt-4 rounded hover:bg-green-700 transition">
+        <a
+          href="/about-us"
+          className="bg-green-600 text-white py-2 px-4 mt-4 rounded hover:bg-green-700 transition inline-block"
+        >
           Learn More
-        </button>
+        </a>
       </div>
     </div>
   );

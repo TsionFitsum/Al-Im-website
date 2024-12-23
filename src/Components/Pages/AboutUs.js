@@ -4,17 +4,24 @@ import { faIndustry, faCoffee, faCogs, faPaw } from '@fortawesome/free-solid-svg
 import React, { useState } from "react";
 import logoo from '../logo/Al-Impex.png'; // Assuming this is your image for Who We Are
 import imageWhoWeAre from '../logo/al-impexLogo.jpg'; // Assuming this is your image for Who We Are
-import division1Image from '../logo/sunvito.jpeg'; // Import your division images
-import division2Image from '../logo/delivery.jpg';
-import division3Image from '../logo/cof.jpg';
-import division4Image from '../logo/zala.png';
-import division5Image from '../logo/zoetis.jpeg';
+import division1Image from '../logo/zoetis.jpeg'; // Import your division images
+import division2Image from '../logo/coffee.jpg';
+import division3Image from '../logo/delivery.jpg';
+import division4Image from '../logo/OIP.jpeg';
+import division5Image from '../logo/Alstaff.jpg';
 import division6Image from '../logo/delivery.jpg';
-import division7Image from '../logo/export.jpg';
+import division7Image from '../logo/Tender.png';
 import '../../App.css'; // Ensure this is the correct path to your CSS file
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import web from '../logo/web.jpg'; // Import your division images
+import web from '../logo/Alstaff.jpg'; // Import your division images
+import webb from '../logo/intCoffee.jpg'; // Import your division images
+import webbb from '../logo/anothercupping.jpg'; // Import your division images
+import webbbb from '../logo/community.jpg'; // Import your division images
+
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 
 
 function AboutUs() {
@@ -25,13 +32,11 @@ function AboutUs() {
   const [hoveredDivisionImage, setHoveredDivisionImage] = useState(web); // Default background image
 
   const divisions = [
-    { id: 1, name: "Novus (Edible Oil)", image: division1Image },
-    { id: 2, name: "FMCG", image: division2Image },
-    { id: 3, name: "Wezam", image: division3Image },
-    { id: 4, name: "Zala", image: division4Image },
-    { id: 5, name: "Animal Health", image: division5Image },
-    { id: 6, name: "Leasing Division", image: division6Image },
-    { id: 7, name: "General Service", image: division7Image },
+    { id: 1, name: "Animal Health", image: division1Image },
+    { id: 2, name: "Coffee", image: division2Image },
+    { id: 3, name: "FMCG", image: division3Image },
+    { id: 4, name: "OPS", image: division4Image }
+    
   ];
 
   // Filtered divisions
@@ -58,6 +63,9 @@ function AboutUs() {
 
   return (
     <div>
+
+
+      
 <div>
   {/* About Us Section */}
   <div className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center">
@@ -89,140 +97,82 @@ function AboutUs() {
         Learn more about our mission to promote excellence and innovation in dynamic markets.
       </p>
       <div className="flex justify-center gap-2">
-        <button className="bg-green-600 text-white font-bold py-1 px-3 rounded hover:bg-green-700 text-sm">
+        {/* <button className="bg-green-600 text-white font-bold py-1 px-3 rounded hover:bg-green-700 text-sm">
           Learn More
-        </button>
-        <button className="bg-gray-200 text-gray-800 font-bold py-1 px-3 rounded hover:bg-gray-300 text-sm">
-          Contact Us
-        </button>
+        </button> */}
+        <a
+          href="/about-us"
+          className="bg-gray-200 text-gray-900 py-2 px-4 mt-4 rounded hover:bg-green-700 transition inline-block"
+        >
+          Get In Touch 
+        </a>
       </div>
     </div>
   </div>
 </div>
 
 
-{/* Introduction Section */}
-      <div className="container mx-auto p-8 mt-32 mb-32  ">
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
-        <div className="lg:w-1/2 lg:pr-10 mb-8 lg:mb-0 bg-gray-100 p-6 rounded-lg shadow-lg">
-  <h2 className="text-4xl font-bold text-green-700 mb-4 border-b-4 border-green-700 pb-2">
-    Who We Are
-  </h2>
-  <p className="text-lg text-gray-700 leading-relaxed">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Sed vitae urna condimentum, convallis urna id, congue nunc. 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae urna condimentum,
-    convallis urna id, congue nunc. Lorem ipsum dolor sit amet, consectetur adipiscing 
-    elit. Sed vitae urna condimentum, convallis urna id, congue nunc.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae urna condimentum, 
-    convallis urna id, congue nunc.
-  </p>
-</div>
 
-<div className="lg:w-1/2 flex justify-center">
-  <img 
-    src={logoo} 
-    alt="Who We Are" 
-    className="transform transition-transform duration-300 hover:scale-110"
-  />
-</div>
 
+<div className="container mx-auto px-8 lg:px-16 py-16 mt-32 mb-32 bg-white rounded-lg shadow-2xl">
+  <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12">
+    {/* Text Section */}
+    <div className="lg:w-1/2 bg-gray-50 p-8 rounded-lg shadow-lg">
+      <h2 className="text-4xl lg:text-5xl font-bold text-green-800 mb-6 border-b-4 border-green-700 pb-3">
+        Who We Are
+      </h2>
+      <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+        At our core, we are dedicated to excellence and innovation. We strive to
+        bring transformative solutions that drive impact and growth. Our commitment
+        to quality and integrity forms the backbone of everything we do. Explore
+        more about our journey, values, and vision.
+      </p>
+    </div>
+
+    {/* Image Carousel Section */}
+    <div className="lg:w-1/2">
+      <Carousel
+        showThumbs={false} // Hides thumbnails
+        showIndicators={true} // Adds dots for navigation
+        showStatus={false} // Hides the "3 of 3" text
+        infiniteLoop
+        useKeyboardArrows
+        autoPlay
+        interval={3000} // Adjusts autoplay speed
+        className="w-full rounded-lg overflow-hidden shadow-lg"
+      >
+        <div>
+          <img
+            src={webb}
+            alt="Slide 1"
+            className="object-cover w-full h-[300px] md:h-[400px] lg:h-[500px] transition-transform duration-500 hover:scale-105"
+          />
         </div>
-      </div>
-
-      <div className="container mx-auto p-8 mt-32">
-  <div className="flex flex-col md:flex-row justify-between space-y-6 md:space-y-0 md:space-x-4">
-    {/* Cards Section */}
-    <div className="grid grid-cols-2 gap-4 md:flex md:flex-col md:gap-6 md:w-1/2">
-      {/* Mission Card */}
-      <div
-        className={`cursor-pointer rounded-lg shadow-md flex items-center justify-between p-6 transition transform hover:scale-105 hover:shadow-lg ${
-          activeSection === 'mission' ? 'bg-green-700 text-white' : 'bg-gray-200 text-gray-800'
-        }`}
-        onClick={() => setActiveSection('mission')}
-      >
-        <span className="text-lg font-bold">Mission</span>
-        <span>🎯</span>
-      </div>
-
-      {/* Vision Card */}
-      <div
-        className={`cursor-pointer rounded-lg shadow-md flex items-center justify-between p-6 transition transform hover:scale-105 hover:shadow-lg ${
-          activeSection === 'vision' ? 'bg-green-700 text-white' : 'bg-gray-200 text-gray-800'
-        }`}
-        onClick={() => setActiveSection('vision')}
-      >
-        <span className="text-lg font-bold">Vision</span>
-        <span>👁</span>
-      </div>
-
-      {/* Motto Card */}
-      <div
-        className={`cursor-pointer rounded-lg shadow-md flex items-center justify-between p-6 transition transform hover:scale-105 hover:shadow-lg ${
-          activeSection === 'motto' ? 'bg-green-700 text-white' : 'bg-gray-200 text-gray-800'
-        }`}
-        onClick={() => setActiveSection('motto')}
-      >
-        <span className="text-lg font-bold">Motto</span>
-        <span>📢</span>
-      </div>
-
-      {/* Values Card */}
-      <div
-        className={`cursor-pointer rounded-lg shadow-md flex items-center justify-between p-6 transition transform hover:scale-105 hover:shadow-lg ${
-          activeSection === 'values' ? 'bg-green-700 text-white' : 'bg-gray-200 text-gray-800'
-        }`}
-        onClick={() => setActiveSection('values')}
-      >
-        <span className="text-lg font-bold">Values</span>
-        <span>💎</span>
-      </div>
-    </div>
-
-    {/* Content Section */}
-    <div className="md:w-1/2 p-6 flex items-center justify-center">
-      <div className="max-w-lg">
-        {activeSection === 'mission' && (
-          <>
-            <h2 className="text-3xl font-bold mb-4 text-green-600">Our Mission</h2>
-            <p className="text-gray-700 text-lg">
-              To inspire the sphere of thought towards sustainable development by partnering
-              with decision-makers to come up with practical solutions that tackle complex
-              development challenges.
-            </p>
-          </>
-        )}
-        {activeSection === 'vision' && (
-          <>
-            <h2 className="text-3xl font-bold mb-4 text-green-600">Our Vision</h2>
-            <p className="text-gray-700 text-lg">
-              To be a socially responsible world-class company that empowers development and
-              fosters excellence.
-            </p>
-          </>
-        )}
-        {activeSection === 'motto' && (
-          <>
-            <h2 className="text-3xl font-bold mb-4 text-green-600">Our Motto</h2>
-            <p className="text-gray-700 text-lg">
-              Promoting Development Through Entrepreneurship.
-            </p>
-          </>
-        )}
-        {activeSection === 'values' && (
-          <>
-            <h2 className="text-3xl font-bold mb-4 text-green-600">Our Values</h2>
-            <p className="text-gray-700 text-lg">
-              Integrity, collaboration, sustainability, and a commitment to excellence guide
-              everything we do.
-            </p>
-          </>
-        )}
-      </div>
+        <div>
+          <img
+            src={webbb}
+            alt="Slide 2"
+            className="object-cover w-full h-[300px] md:h-[400px] lg:h-[500px] transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+        <div>
+          <img
+            src={webbbb}
+            alt="Slide 3"
+            className="object-cover w-full h-[300px] md:h-[400px] lg:h-[500px] transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+      </Carousel>
     </div>
   </div>
 </div>
- 
+
+
+
+
+
+
+
 
 
 {/* Introduction Section */}
@@ -280,7 +230,7 @@ function AboutUs() {
           {divisions.map((division) => (
             <div
               key={division.id}
-              className="flex justify-center items-center text-white text-lg font-semibold px-4 py-2 bg-green-700 bg-opacity-75 w-1/4 text-center rounded-md hover:bg-green-800 cursor-pointer transition-all"
+              className="flex justify-center items-center text-white text-lg font-semibold px-4 py-2 bg-green-700 bg-opacity-100 w-1/4 text-center rounded-md hover:bg-green-900 cursor-pointer transition-all"
               onMouseEnter={() => setHoveredDivisionImage(division.image)}
               onMouseLeave={() => setHoveredDivisionImage(web)}
             >
@@ -292,46 +242,54 @@ function AboutUs() {
     </div>
 </div>
 
-<div className="flex justify-center space-x-8 text-center mt-12">
+
+
+
+
+<div className="flex justify-center space-x-8 text-center mt-12 mb-4 bg-gray-200">
   {/* Icon Section 1 */}
-  <div className="flex flex-col items-center transform hover:scale-110 transition-transform duration-300">
+  {/* <div className="flex flex-col items-center transform hover:scale-110 transition-transform duration-300">
     <FontAwesomeIcon icon={faIndustry} size="3x" className="text-green-700 mb-4" />
     <h3 className="text-lg font-bold text-gray-800">Industry Expertise</h3>
     <p className="text-gray-600 text-sm mt-2">
       Years of excellence in the agriculture and export sector.
     </p>
-  </div>
+  </div> */}
 
   {/* Icon Section 2 */}
-  <div className="flex flex-col items-center transform hover:scale-110 transition-transform duration-300">
+  {/* <div className="flex flex-col items-center transform hover:scale-110 transition-transform duration-300">
     <FontAwesomeIcon icon={faCoffee} size="3x" className="text-green-700 mb-4" />
     <h3 className="text-lg font-bold text-gray-800">Quality Products</h3>
     <p className="text-gray-600 text-sm mt-2">
       Delivering the finest Ethiopian coffee and pulses worldwide.
     </p>
-  </div>
+  </div> */}
 
   {/* Icon Section 3 */}
-  <div className="flex flex-col items-center transform hover:scale-110 transition-transform duration-300">
+  {/* <div className="flex flex-col items-center transform hover:scale-110 transition-transform duration-300">
     <FontAwesomeIcon icon={faCogs} size="3x" className="text-green-700 mb-4" />
     <h3 className="text-lg font-bold text-gray-800">Innovation</h3>
     <p className="text-gray-600 text-sm mt-2">
       Continuously improving processes and services.
     </p>
-  </div>
+  </div> */}
 
   {/* Icon Section 4 */}
-  <div className="flex flex-col items-center transform hover:scale-110 transition-transform duration-300">
+  {/* <div className="flex flex-col items-center transform hover:scale-110 transition-transform duration-300">
     <FontAwesomeIcon icon={faPaw} size="3x" className="text-green-700 mb-4" />
     <h3 className="text-lg font-bold text-gray-800">Sustainability</h3>
     <p className="text-gray-600 text-sm mt-2">
       Promoting ethical and sustainable business practices.
     </p>
-  </div>
+  </div> */}
 </div>
 
 
-<div className="w-auto bg-green-100 p-8 rounded-lg shadow-lg relative border-2 border-transparent mb-0 text-center mt-32">
+
+
+
+
+<div className="w-auto bg-green-100 p-8 rounded-lg shadow-lg relative border-2 border-transparent mb-0 text-center mt-42">
           <h2 className="text-4xl font-semibold text-center text-green-900 mb-6">Get To Know Us</h2>
           <p className="text-gray-700 text-lg mb-6">
           Get in Touch

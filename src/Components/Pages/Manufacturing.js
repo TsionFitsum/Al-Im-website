@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import cardImage1 from '../logo/Sunvito.png'; // Import card images
 import cardImage2 from '../logo/palmoil.jpg';
 import cardImage3 from '../logo/soyabean.jpg';
-import backgroundImage from '../logo/SunvitoBG.jpg'; // Adjust the path as needed
+import backgroundImage from '../logo/novus.jpg'; // Adjust the path as needed
 import deliveryImage from '../logo/delivery.jpg'; // Adjust the path as needed
 import '../../App.css';
 

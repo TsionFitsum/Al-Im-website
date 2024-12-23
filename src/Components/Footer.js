@@ -8,7 +8,7 @@ function Footer() {
         {/* Contact Information */}
         <div>
           <h3>Contact Us</h3>
-          <p>Kirkos Subcity, Dembel City Center Building, 5th Floor</p>
+          <p>Kirkos Subcity, Dembel City Center, 5th Floor</p>
           <p>Addis Ababa, Ethiopia</p>
           <p>Email: info@al-impex.com</p>
           <p>Phone: +251 123 456 789</p>
