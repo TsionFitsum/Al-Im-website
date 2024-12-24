@@ -4,10 +4,10 @@ import { faIndustry, faCoffee, faCogs, faPaw } from '@fortawesome/free-solid-svg
 import React, { useState } from "react";
 import logoo from '../logo/Al-Impex.png'; // Assuming this is your image for Who We Are
 import imageWhoWeAre from '../logo/al-impexLogo.jpg'; // Assuming this is your image for Who We Are
-import division1Image from '../logo/zoetis.jpeg'; // Import your division images
+import division1Image from '../logo/Zoetiss.jpg'; // Import your division images
 import division2Image from '../logo/coffee.jpg';
-import division3Image from '../logo/delivery.jpg';
-import division4Image from '../logo/OIP.jpeg';
+import division3Image from '../logo/sunv.jpg';
+import division4Image from '../logo/year_of_pulses.jpg';
 import division5Image from '../logo/Alstaff.jpg';
 import division6Image from '../logo/delivery.jpg';
 import division7Image from '../logo/Tender.png';
@@ -18,6 +18,9 @@ import web from '../logo/Alstaff.jpg'; // Import your division images
 import webb from '../logo/intCoffee.jpg'; // Import your division images
 import webbb from '../logo/anothercupping.jpg'; // Import your division images
 import webbbb from '../logo/community.jpg'; // Import your division images
+import webNo1 from '../logo/factory.jpg';
+import webNo2 from '../logo/sunvitoD2D.jpg';
+import webNo5 from '../logo/fabrica.jpg';
 
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -62,110 +65,150 @@ function AboutUs() {
   };
 
   return (
-    <div>
+    <div className="bg-gray-100">
 
 
       
 <div>
   {/* About Us Section */}
-  <div className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center">
+  <div className="relative w-full h-[500px] md:h-[600px] flex items-center justify-center">
     {/* Background Image */}
     <div
       className="absolute inset-0 bg-cover bg-center"
       style={{
-        backgroundImage: `url(${img})` // Replace with the About Us banner image
+        backgroundImage: `url(${img})`, // Replace with the About Us banner image
+        backgroundSize: "cover", // Ensures the image covers the entire area
+        backgroundPosition: "center", // Centers the image
       }}
     ></div>
 
     {/* Semi-transparent Black Overlay */}
     <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-    {/* Banner Content with Hover Effect */}
-    <div
-      className="relative z-10 px-4 py-6 max-w-xl rounded-lg shadow-lg text-center hover:bg-opacity-50 hover:shadow-xl hover:-translate-y-2 transition duration-300"
-      style={{
-        background: "rgba(255, 255, 255, 0.3)", // Semi-transparent gray
-        backdropFilter: "blur(10px)", // Frosted glass blur effect
-        WebkitBackdropFilter: "blur(10px)", // For Safari
-        border: "1px solid rgba(255, 255, 255, 0.2)", // Subtle border
-      }}
-    >
-      <h1 className="text-2xl md:text-4xl font-bold text-green-800 leading-tight mb-2">
-        About Us
-      </h1>
-      <p className="text-gray-200 mb-4 text-sm md:text-base">
-        Learn more about our mission to promote excellence and innovation in dynamic markets.
-      </p>
-      <div className="flex justify-center gap-2">
-        {/* <button className="bg-green-600 text-white font-bold py-1 px-3 rounded hover:bg-green-700 text-sm">
-          Learn More
-        </button> */}
-        <a
+    {/* Smaller Transparent Content Box */}
+    <div 
+    className="relative z-10 px-8 py-2 max-w-xl rounded-lg shadow-lg text-center bg-white bg-opacity-40 backdrop-blur-md border border-white border-opacity-20 hover:bg-opacity-50 hover:shadow-xl hover:-translate-y-2 transition duration-300"
+    style={{ height: 'auto', maxHeight: '700px' }} // Further reduced container height
+  >
+    <h1 className="text-2xl md:text-3xl font-bold text-green-800 leading-tight mb-2 mt-5">
+      About Us 
+    </h1>
+    <p className="text-gray-200 mb-4 text-base md:text-lg">
+  Discover our mission to promote excellence and innovation in dynamic markets. 
+  We are committed to delivering impactful solutions that drive growth and transformation.
+</p>
+
+    
+    {/* Buttons Inside the Transparent Container */}
+    <div className="flex justify-center gap-4 mb-5">
+    <a
           href="/about-us"
-          className="bg-gray-200 text-gray-900 py-2 px-4 mt-4 rounded hover:bg-green-700 transition inline-block"
+          className="bg-green-600 text-white py-2 px-4 mt-4 rounded hover:bg-green-700 transition inline-block"
         >
-          Get In Touch 
+          Learn More
         </a>
-      </div>
+      {/* <button className="bg-gray-200 text-gray-800 font-bold py-2 px-5 rounded-lg hover:bg-gray-300 text-lg">
+        Watch the Webcast
+      </button> */}
     </div>
+  </div>
   </div>
 </div>
 
 
 
-
-<div className="container mx-auto px-8 lg:px-16 py-16 mt-32 mb-32 bg-white rounded-lg shadow-2xl">
-  <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12">
+<div className="container mx-auto px-8 lg:px-16 py-16 mt-56 mb-20 bg-white rounded-lg shadow-2xl">
+  <div className="flex flex-col lg:flex-row justify-between items-start gap-16">
     {/* Text Section */}
-    <div className="lg:w-1/2 bg-gray-50 p-8 rounded-lg shadow-lg">
-      <h2 className="text-4xl lg:text-5xl font-bold text-green-800 mb-6 border-b-4 border-green-700 pb-3">
+    <div className="lg:w-1/2 bg-gray-100 p-10 rounded-md shadow-md mt-20">
+      <h2 className="text-4xl font-semibold text-gray-800 leading-tight border-l-4 border-green-600 pl-4 mb-6">
         Who We Are
       </h2>
-      <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
-        At our core, we are dedicated to excellence and innovation. We strive to
-        bring transformative solutions that drive impact and growth. Our commitment
-        to quality and integrity forms the backbone of everything we do. Explore
-        more about our journey, values, and vision.
+      <p className="text-lg lg:text-xl text-gray-600 leading-relaxed mb-6">
+        We are committed to excellence and innovation. Our solutions drive
+        transformation, empower growth, and redefine industries. Integrity and
+        quality form the foundation of our work, making us a trusted partner in
+        delivering impactful results.
       </p>
+      {/* <button className="px-6 py-3 text-white bg-green-600 rounded hover:bg-green-700 shadow-md transition">
+        Learn More
+      </button> */}
     </div>
 
-    {/* Image Carousel Section */}
-    <div className="lg:w-1/2">
-      <Carousel
-        showThumbs={false} // Hides thumbnails
-        showIndicators={true} // Adds dots for navigation
-        showStatus={false} // Hides the "3 of 3" text
-        infiniteLoop
-        useKeyboardArrows
-        autoPlay
-        interval={3000} // Adjusts autoplay speed
-        className="w-full rounded-lg overflow-hidden shadow-lg"
-      >
-        <div>
-          <img
-            src={webb}
-            alt="Slide 1"
-            className="object-cover w-full h-[300px] md:h-[400px] lg:h-[500px] transition-transform duration-500 hover:scale-105"
-          />
-        </div>
-        <div>
-          <img
-            src={webbb}
-            alt="Slide 2"
-            className="object-cover w-full h-[300px] md:h-[400px] lg:h-[500px] transition-transform duration-500 hover:scale-105"
-          />
-        </div>
-        <div>
-          <img
-            src={webbbb}
-            alt="Slide 3"
-            className="object-cover w-full h-[300px] md:h-[400px] lg:h-[500px] transition-transform duration-500 hover:scale-105"
-          />
-        </div>
-      </Carousel>
-    </div>
+   {/* Carousel Section */}
+<div className="lg:w-1/2">
+  <div className="group relative overflow-hidden transition-transform duration-500 hover:shadow-lg hover:scale-[1.02] rounded-lg">
+    <Carousel
+      showThumbs={false} // Hides thumbnails
+      showIndicators={false} // Adds dots for navigation
+      showStatus={false} // Hides the "3 of 3" text
+      infiniteLoop
+      useKeyboardArrows
+      autoPlay
+      interval={3000} // Adjusts autoplay speed
+      showArrows={false} // Hides arrow navigation
+      className="w-full rounded-lg overflow-hidden shadow-lg"
+    >
+      <div>
+        <img
+          src={webbb}
+          alt="Slide 1"
+          className="object-cover w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-lg transition-transform duration-500 hover:scale-105"
+        />
+      </div>
+      <div>
+        <img
+          src={webbbb}
+          alt="Slide 2"
+          className="object-cover w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-lg transition-transform duration-500 hover:scale-105"
+        />
+      </div>
+      <div>
+        <img
+          src={webNo2}
+          alt="Slide 3"
+          className="object-cover w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-lg transition-transform duration-500 hover:scale-105"
+        />
+      </div>
+      <div>
+        <img
+          src={webb}
+          alt="Slide 4"
+          className="object-cover w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-lg transition-transform duration-500 hover:scale-105"
+        />
+      </div>
+      <div>
+        <img
+          src={webNo1}
+          alt="Slide 5"
+          className="object-cover w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-lg transition-transform duration-500 hover:scale-105"
+        />
+      </div>
+      <div>
+        <img
+          src={webNo5}
+          alt="Slide 5"
+          className="object-cover w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-lg transition-transform duration-500 hover:scale-105"
+        />
+      </div>
+    </Carousel>
   </div>
 </div>
+
+  </div>
+  <div className="container mx-auto mt-44 mb-32 px-4">
+          <div className="max-w-4xl mx-auto text-center mt-32 mb-20">
+            <h2 className="text-4xl font-bold mt-32 mb-10 text-green-800">Our Story</h2>
+            <p className="text-xl text-gray-600 mb-8">
+              At Al-Impex, we are dedicated to connecting global markets and enriching local communities through
+              our comprehensive range of businesses. Our businesses are designed to uplift communities while delivering 
+              highest quality products.
+            </p> 
+          </div>
+          </div>
+</div>
+
+
 
 
 
@@ -176,7 +219,7 @@ function AboutUs() {
 
 
 {/* Introduction Section */}
-<div className="container mx-auto p-8 mt-32  rounded-lg shadow-lg">
+{/* <div className="container mx-auto p-8 mt-32  rounded-lg shadow-lg">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
           <div className="lg:w-1/2 lg:pr-10 mb-8 lg:mb-0">
             <h2 className="text-4xl font-bold text-green-700 mb-4 ">Our Story</h2>
@@ -195,7 +238,7 @@ function AboutUs() {
             <img src={imageWhoWeAre} alt="Who We Are" className="rounded-lg shadow-lg" />
           </div>
         </div>
-      </div>
+      </div>  */}
 
 
 
@@ -210,7 +253,7 @@ function AboutUs() {
       
 
       {/* Background Section */}
-      <div
+      <div 
         className="relative h-screen bg-cover bg-center"
         style={{
           backgroundImage: `url(${hoveredDivisionImage})`,

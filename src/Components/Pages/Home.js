@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import image1 from '../logo/sunv.jpg';
-import image3 from '../logo/mas.jpg';
+import image1 from   '../logo/tafoWarehouse.jpg';
+import image3 from '../logo/AGRIC.jpg';
 import image4 from '../logo/novuss.jpg';
 import image5 from '../logo/fafrica.jpg';
-import imagee from '../logo/AGRIC.jpg';
-import imageee from '../logo/loading.jpg';
-import imageNo1 from '../logo/tafoWarehouse.jpg';
+import imagee from  '../logo/sunv.jpg';
+import imageee from '../logo/mas.jpg';
+import imageNo1 from '../logo/commm.jpg';
 import imageNo2 from '../logo/tafo.jpg';
-import imageNo3 from '../logo/commm.jpg';
+import imageNo3 from  '../logo/loading.jpg';
 import imageNo4 from '../logo/Novusjerrycan.jpg';
 import imageNo5 from '../logo/fabrica.jpg';
 import image7 from '../logo/zoetis.jpeg';
@@ -130,7 +130,7 @@ const Home = () => {
     <div className="flex justify-center gap-4 mb-5">
     <a
           href="/about-us"
-          className="bg-gray-200 text-gray-900 py-2 px-4 mt-4 rounded hover:bg-green-700 transition inline-block"
+          className="bg-green-600 text-white py-2 px-4 mt-4 rounded hover:bg-green-700 transition inline-block"
         >
           Learn More
         </a>
