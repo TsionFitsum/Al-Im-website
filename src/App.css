@@ -284,3 +284,132 @@ ul li:hover {
     height: 140px;
   }
 }
+
+
+
+/* General Navbar Styles */
+nav {
+  background-color: #f9f9f9;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  padding: 5px 10px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Link Container and Hover Effects */
+.link-container {
+  position: relative;
+  display: inline-block;
+  padding: 5px 25px; /* Add padding to create spacing for the hover background */
+}
+
+.link-hover-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('al-impexLogo-removebg-preview.svg'); /* Replace with the correct path to your SVG */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.link-container:hover .link-hover-bg {
+  opacity: 0.3; /* Adjust opacity for hover background */
+}
+
+/* Dropdown Styles */
+.nav-tab {
+  font-weight: bold;
+  padding: 10px 15px;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-tab:hover {
+  color: #2f855a; /* Hover color for links (green) */
+}
+
+.dropdown {
+  z-index: 50;
+}
+
+.dropdown li {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Button Hover Effects */
+.button-hover-effect {
+  position: relative;
+  display: inline-block;
+  color: gray;
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500; /* font-medium */
+  transition: color 0.3s ease-in-out;
+}
+
+.button-hover-effect::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #2f855a; /* green-700 */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.button-hover-effect:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.button-hover-effect:hover {
+  color: #2f855a; /* green-700 */
+}
+
+/* Additional Hover Effects for Buttons */
+.button-hover-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: url('al-impexLogo-removebg-preview.svg') no-repeat center center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+
+.button-hover-effect:hover::after {
+  opacity: 0.4; /* Adjust the opacity to make the image more or less visible */
+}

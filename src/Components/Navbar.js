@@ -30,7 +30,7 @@ function VolcafeHeader() {
 <div className="relative flex items-center nav-tab">
   <Link
     to="/"
-    className="text-white hover:text-gray-300 px-6 text-lg font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-1 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+    className="text-white hover:text-gray-100 px-6 text-lg font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-1 after:bg-white hover:after:w-full after:transition-all after:duration-300"
   >
     Home
   </Link>
@@ -56,7 +56,7 @@ function VolcafeHeader() {
             <div className="relative flex items-center nav-tab">
             <button
   onClick={toggleLocations}
-  className="text-white hover:text-gray-300 px-6 text-lg font-bold focus:outline-none relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-1 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+  className="text-white hover:text-gray-100 px-6 text-lg font-bold focus:outline-none relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-1 after:bg-white hover:after:w-full after:transition-all after:duration-300"
 >
   Locations
 </button>
@@ -67,30 +67,28 @@ function VolcafeHeader() {
     <div className="grid grid-cols-2 gap-4">
       {/* Africa Column */}
       <div>
-        <h3 className="font-bold mb-2">Africa</h3>
+        <h3 className="font-bold mb-2">Ethiopia</h3>
         <ul className="text-sm space-y-1">
-          <li>Burkina Faso</li>
-          <li>Ghana</li>
-          <li>South Africa</li>
-          <li>Cameroon</li>
-          <li>Mozambique</li>
-          <li>Togo</li>
+          <li>Addis Ababa</li>
+          <li>Adama</li>
+          <li>Dilla</li>
+          <li>Guji</li>
         </ul>
       </div>
 
       {/* Asia Pacific Column */}
       <div>
-        <h3 className="font-bold mb-2">Asia Pacific</h3>
+        <h3 className="font-bold mb-2">Addis Ababa</h3>
         <ul className="text-sm space-y-1">
-          <li>Australia</li>
-          <li>Vietnam</li>
-          <li>China</li>
-          <li>Singapore</li>
-          <li>Thailand</li>
+          <li>Dembel-Head Quarter</li>
+          <li>Jacross</li>
+          <li>Legetafo</li>
+          <li>Kality</li>
+          
         </ul>
       </div>
 
-      {/* Europe Column */}
+      {/* Europe Column
       <div>
         <h3 className="font-bold mb-2">Europe</h3>
         <ul className="text-sm space-y-1">
@@ -101,7 +99,7 @@ function VolcafeHeader() {
           <li>Spain</li>
           <li>United Kingdom</li>
         </ul>
-      </div>
+      </div> */}
     </div>
   </div>
 )}
