@@ -161,10 +161,10 @@ function VolcafeHeader() {
       onMouseEnter={() => handleMouseEnter("network")}
       onMouseLeave={handleMouseLeave}
     >
-      <Link to="/network" className="font-bold hover:text-gray-700">
+      <Link to="/our-products" className="font-bold hover:text-gray-700">
         Our Products ↓
       </Link>
-      {hoveredMenu === "network" && (
+      {/* {hoveredMenu === "network" && (
         <ul className="absolute top-full left-0 bg-black text-white shadow-lg py-2 rounded w-56 dropdown">
           <li className="px-4 py-2 hover:bg-gray-800">
             <Link to="/manufacturing">Edible Oil</Link>
@@ -176,7 +176,7 @@ function VolcafeHeader() {
             <Link to="https://zala-nine.vercel.app/">Zala</Link>
           </li>
         </ul>
-      )}
+      )} */}
     </div>
 
     <Link to="/contact-us" className="font-bold hover:text-gray-700">

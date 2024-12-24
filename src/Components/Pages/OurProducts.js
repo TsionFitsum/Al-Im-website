@@ -1,7 +1,7 @@
 import React from "react";
 import "../../App.css"; // Import Tailwind styles
 
-function Manufacturing() {
+function OurProducts() {
   return (
     <div className="font-sans bg-gray-50">
       {/* Navbar */}
@@ -129,6 +129,6 @@ function Section({ id, title, description, items }) {
   );
 }
 
-export default Manufacturing;
+export default OurProducts;
 
 

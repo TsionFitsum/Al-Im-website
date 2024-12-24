@@ -11,6 +11,7 @@ import ContactUs from './Components/Pages/ContactUs';
 import OilSeedsAndPulses from './Components/Pages/Zala';
 import Wezam from './Components/Pages/Wezam';
 import Manufacturing from './Components/Pages/Manufacturing'; // Import the Manufacturing component
+import OurProducts from './Components/Pages/OurProducts';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about-us' element={<AboutUs />} />
+          <Route path='/our-products' element={<OurProducts />} />
+
           <Route path='/import/*' element={<Import />} />
           <Route path='/export/*' element={<Export />} />
           <Route path='/contact-us' element={<ContactUs />} />
